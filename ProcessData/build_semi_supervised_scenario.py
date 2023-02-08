@@ -7,56 +7,63 @@ Triplets as keys.
 import os
 import json
 import random
-from data_load_and_dump import load_data_from_file
 from data_transform import build_key2valueList_dict
+from load_dataset import LoadDataset
 
-class LoadDataset():
-    def __init__(self, base_data_dir, dataset_name):
-        print(base_data_dir)
-        print(dataset_name)
-        self.path_to_train = os.path.join(base_data_dir, dataset_name, 
-                                          f"{dataset_name}_train.txt")
-        self.path_to_val = os.path.join(base_data_dir, dataset_name, 
-                                        f"{dataset_name}_val.txt")
-        self.path_to_test = os.path.join(base_data_dir, dataset_name, 
-                                         f"{dataset_name}_test.txt")
-        
-    def check_file_exists(self, path_to_file):
-        if os.path.exists(path_to_file):
-            return True
 
-    def load_training_data(self,):
-        if not os.path.exists(self.path_to_train):
-            print(f"File {self.path_to_train} not exist! Exit!")
-            exit()
-        data = load_data_from_file(self.path_to_train)
-        print(f"Loading {len(data)} instances from file: {self.path_to_train}")
-        return data
-    
-    def load_validation_data(self,):
-        if not os.path.exists(self.path_to_val):
-            print(f"File {self.path_to_val} not exist! Exit!")
-            exit()
-        data = load_data_from_file(self.path_to_val)
-        print(f"Loading {len(data)} instances from file: {self.path_to_val}")
-        return data
+class LoadDatasetWithNASplit(LoadDataset):
+    """Load and split data into NonNA and NA sets"""
+    def __init__(self, base_data_dir, dataset_name, NA_names=None):
+        super().__init__(base_data_dir, dataset_name)
+        if NA_names is None:
+            self.NA_names=["no_relation", "NA", "Other"]
+        else:
+            self.NA_names = NA_names
+        print(self.NA_names)
 
+    def load_training_NA_and_NonNA_data(self,):
+        """return (NA data, NonNA data)"""
+        data = self.load_training_data()
+        NA_data, NonNA_data = self.extract_NA_data(data, self.NA_names)
+        return (NA_data, NonNA_data)
+
+    def load_validation_NA_and_NonNA_data(self,):
+        data = self.load_validation_data()
+        NA_data, NonNA_data = self.extract_NA_data(data, self.NA_names)
+        return (NA_data, NonNA_data)
+
+    def load_test_NA_and_NonNA_data(self,):
+        pass
+
+    def extract_NA_data(self, data, NA_names):
+        """
+        NA_names is a list of possible NA tags
+        """
+        NA_data = []
+        NonNA_data = []
+        print(len(data))
+        for inst in data:
+            if inst["relation"] in NA_names:
+                NA_data.append(inst)
+            else:
+                NonNA_data.append(inst)
+        if len(NA_data) == 0:
+            print(f"No NA data found! Is Na_names={NA_names} correct?")
+        return (NA_data, NonNA_data)
 
 
 class BuildSemiSupervisedScenario():
     """Input a data, and then choose which approach to split into labeled and unlabeled data sets.
     """
     def __init__(self, data):
-        print(f"load {len(data)} instances")
-        NA_data, NonNA_data = self.extract_NA_data(data)
-        self.NA_data = NA_data
-        self.NonNA_data = NonNA_data
+        print(f"load data {len(data)} instances.")
+        self.data = data
     
     def split_data_by_triplets(self, labeled_proportion=0.5):
         """
         Split the data into labeled and unlabeled triplets, with its sentences.
         """
-        triplet2insts = self.extract_triplet(self.NonNA_data)
+        triplet2insts = self.extract_triplet(self.data)
         triplets = list(triplet2insts.keys())
         test = [x for x in range(10)]
         random.shuffle(test)
@@ -70,18 +77,6 @@ class BuildSemiSupervisedScenario():
         labeled_triplet2insts = {key: triplet2insts[key] for key in labeled_triplets}
         unlabeled_triplet2insts = {key: triplet2insts[key] for key in unlabeled_triplets}
         return (labeled_triplet2insts, unlabeled_triplet2insts)
-
-    @classmethod
-    def extract_NA_data(self, data, NA_names=["no_relation", "NA", "Other"]):
-        NA_data = []
-        NonNA_data = []
-        print(len(data))
-        for inst in data:
-            if inst["relation"] in NA_names:
-                NA_data.append(inst)
-            else:
-                NonNA_data.append(inst)
-        return (NA_data, NonNA_data)
 
     @classmethod
     def extract_triplet(self, data):
@@ -145,7 +140,7 @@ class DumpLowResourceDataset():
                 path_to_subset_triplet = os.path.join(self.base_dir, f"train_sentence_scale{scale}_seed{seed}")
                 self.dump_triplet2insts_as_flat(path_to_subset_triplet, selected_triplet2insts)
 
-
+    @classmethod
     def dump_triplet2insts_as_flat(self, filename, triplet2insts):
         """
         Add the key (triplet name) into inst's first column, and then dump the insts into file.
@@ -176,16 +171,15 @@ if __name__ == "__main__":
     seed = 2
     # This seed is for triplets splitting
     random.seed(seed)
-    dataset = "re-tacred"
-    loader = LoadDataset("Dataset", "re-tacred")
-    print(loader)
-    train_data = loader.load_training_data()
-    val_data = loader.load_validation_data()    # val data is also needed for training the generator, a simple check of the PPL
-    # Directly call the callmethod to get NonNA data of validation
-    val_NA_data, val_NonNA_data = BuildSemiSupervisedScenario.extract_NA_data(val_data)
+    dataset = "re-tacred_0.1"
+    loader = LoadDatasetWithNASplit("Dataset", dataset)
+    train_NA_data, train_NonNA_data = loader.load_training_NA_and_NonNA_data()
+    # val data is also needed for training the generator, a simple check of the PPL
+    val_NA_data, val_NonNA_data = loader.load_validation_NA_and_NonNA_data()
+
     val_triplet2insts = BuildSemiSupervisedScenario.extract_triplet(val_NonNA_data)
 
-    builder = BuildSemiSupervisedScenario(train_data)
+    builder = BuildSemiSupervisedScenario(train_NonNA_data)
     labeled_triplet2insts, unlabeled_triplet2insts = builder.split_data_by_triplets(labeled_proportion=0.5)
 
     base_dir = f"/home/jjyu/GenerationForRE/Benchmark/{dataset}_for_generation"
@@ -195,7 +189,11 @@ if __name__ == "__main__":
     seeds = [0, 1, 2]   # These seeds are used to extract the low-resource training data
     dumper = DumpLowResourceDataset(base_dir, dataset, scales=scales, seeds=seeds)
     dumper.dump_semi_dataset(labeled_triplet2insts, unlabeled_triplet2insts, val_triplet2insts=val_triplet2insts)
-    
+
+    # the NA set of training is saved. Hence we can build a fully RE dataset quickly.
+    path_to_train_NA = os.path.join(base_dir, "train_sentence_NA.txt") 
+    train_NA_triplet2insts = BuildSemiSupervisedScenario.extract_triplet(train_NA_data)
+    DumpLowResourceDataset.dump_triplet2insts_as_flat(path_to_train_NA, train_NA_triplet2insts)
 
 
 

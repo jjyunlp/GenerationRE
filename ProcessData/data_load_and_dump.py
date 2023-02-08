@@ -21,7 +21,7 @@ def dump_data_to_file(output_file: str, data: List, overwrite=False) -> None:
 			writer.write(json.dumps(inst) + '\n')
 
 
-def load_relations_from_file(input_file: str)-> dict:
+def load_labels_from_file(input_file: str)-> dict:
 	"""Directly load all relaitons to id in a dict json file
 
 	Args:
@@ -32,4 +32,16 @@ def load_relations_from_file(input_file: str)-> dict:
 	"""
 	with open(input_file, 'r') as reader:
 		rel2id = json.load(reader)
-		return rel2id
+	return rel2id
+
+def dump_labels_to_file(data, output_file: str, overwrite=False)-> None:
+	"""Directly dump all label mapping info in a dict json file
+
+	Args:
+		input_file (str): _description_
+
+	Returns:
+		dict: _description_
+	"""
+	with open(output_file, 'w') as writer:
+		json.dump(data, writer, indent=4)

@@ -2,7 +2,7 @@ import os
 import argparse
 import random
 from pathlib import Path
-from wrapper import Generator, Extractor, Dataset
+from TripletPrompt.generator import Generator, Extractor, Dataset
 
 """
 2022-09-21, Junjie Yu, Soochow University
@@ -86,7 +86,7 @@ class TrainGenerator():
         )
 
         # Fine-tuning the PLM with corpus
-        print(self.path_to_train)
+        print(f"Start fine-tuning the PLM on {self.path_to_train}")
         generator.fit(self.path_to_train, self.path_to_val)
         print("End fine-tuning")
 
@@ -101,16 +101,17 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     training_kwargs = dict(seed=args.seed, encoder_name=args.prompt)
+    
     # generator training is on V100-32G
     model_kwargs = dict(batch_size=4, grad_accumulation=4)
 
-    train_file = f"{args.dataset}_train.json"
-    val_file = f"{args.dataset}_val.json"   # should be a part of training data
-    test_file = f"{args.dataset}_test.json"
+    train_file = f"train_sentence_scale{args.scale}_seed{args.seed}.txt"
+    val_file = f"val_sentence.txt"   # should be a part of training data
+    test_file = f"val_sentence.txt"     # currently, we use val.
     file_kwargs = dict(train_file=train_file,
                      val_file=val_file,
                      test_file=test_file)
-    data_dir = f"./benchmark/{args.dataset}"
+    data_dir = f"./Benchmark/{args.dataset}"
     gpt_size = "gpt2-large"
     output_dir = f"/data/jjyu/RE_Sentence_Generation/Fine_tuned_model/{args.dataset}/{gpt_size}"
     if not os.path.isdir(output_dir):

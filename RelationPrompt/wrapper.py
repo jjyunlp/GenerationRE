@@ -22,6 +22,46 @@ def safe_divide(a: float, b: float) -> float:
     return a / b
 
 
+def convert_data(filename):
+    """
+    The format of re-tacred and semeval is unmatched with the input of RelationPrompt
+    """
+    data = []
+    with open(filename) as reader:
+        for line in reader.readlines():
+            data.append(json.loads(line.strip()))
+    print(f"Load {len(data)} instances from {filename}.")
+    triplets = {}
+    new_data = []
+    for inst in data:
+        # print(inst)
+        tokens = inst['token']
+        head_start, head_end = inst['h']['pos']
+        tail_start, tail_end = inst['t']['pos']
+        head_name = inst['h']['name']
+        tail_name = inst['t']['name']
+        # the re-tacred also use token-based position
+        head_index = [x for x in range(head_start, head_end)]
+        tail_index = [x for x in range(tail_start, tail_end)]
+
+        label = inst['relation']
+        inst = {
+            "tokens": tokens,
+            "head": head_index,
+            "tail": tail_index,
+            "head_name": head_name,
+            "tail_name": tail_name,
+            "label": label
+        }
+        new_data.append(inst)
+        triplet = f"{head_name}_{tail_name}_{label}"
+        if triplet not in triplets:
+            triplets[triplet] = [inst]
+        else:
+            triplets[triplet].append(inst)
+    return new_data
+
+
 class Sentence(BaseModel):
     triplets: List[RelationSentence]
 
@@ -91,6 +131,15 @@ class Dataset(BaseModel):
     def load(cls, path: str):
         with open(path) as f:
             sents = [Sentence(**json.loads(line)) for line in f]
+        return cls(sents=sents)
+    
+    @classmethod
+    def load_with_convert(cls, path: str):
+        """We need to convert our dataset into target format.
+        This is for re-tacred.
+        We can refer the follow function load_fewrel, load_wiki."""
+        data = convert_data(path)
+        sents = [Sentence(**inst) for inst in data]
         return cls(sents=sents)
 
     def save(self, path: str):
@@ -221,6 +270,7 @@ def write_data_splits(
 
 
 class Generator(BaseModel):
+    # These class variables will be initialized as the __init__ function in BaseModel
     load_dir: str
     save_dir: str
     num_gen_per_label: int = 5  # default 250, too large for DS bag
@@ -262,8 +312,10 @@ class Generator(BaseModel):
         if Path(model.model_dir).exists():
             return
 
-        data_train = Dataset.load(path_train)
-        data_dev = Dataset.load(path_dev)
+        # data_train = Dataset.load(path_train)
+        # we need to convert RE data into relationprompt format
+        data_train = Dataset.load_with_convert(path_train)
+        data_dev = Dataset.load_with_convert(path_dev)
         # write data，包括encoding，即把语料转换成指定的prompt的形式
         path_train = self.write_data(data_train, "train")
         path_dev = self.write_data(data_dev, "dev")
