@@ -1,5 +1,5 @@
 """
-Convert a supervised dataset into a semisupervised scenario.
+Convert a supervised dataset into a semi-supervised scenario.
 Half data are prepared for training, and half data are for generation.
 Triplets as keys.
 """
@@ -7,7 +7,7 @@ Triplets as keys.
 import os
 import json
 import random
-from data_transform import build_key2valueList_dict
+from REUtils.data_transform import build_key2valueList_dict
 from load_dataset import LoadDataset
 
 
@@ -158,12 +158,6 @@ class DumpLowResourceDataset():
             for triplet, insts in triplet2insts.items():
                 new_triplet_object = {"triplet": triplet, "insts": insts}
                 writer.write(json.dumps(new_triplet_object) + '\n')
-
-
-
-
-
-
 
 
 if __name__ == "__main__":

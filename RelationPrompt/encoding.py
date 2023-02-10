@@ -266,8 +266,78 @@ class TripletGenerateEncoder(Encoder):
         #    # nyt10m default
         #    r = r.split("/")[-1].replace("_", " ")
         #if dataset_name == "re-tacred":
-        r = r.replace("per:", "person : ")
-        r = r.replace("org:", "organization : ")
+        # These operation are for re-tacred
+        r = r.replace("per:", "person - ")
+        r = r.replace("org:", "organization - ")
+        r = r.replace("/", " or ")
+        r = r.replace("_", " ")
+        r = r.replace("-", " - ") # This is for semeval
+        # 其实就在这边添加一个Relation Words，根据relation，从dict中选择，生成即可。
+        return f"Relation : {r} , Head Entity : {s} , Tail Entity : {o} ."
+
+
+    def encode(self, sent: RelationSentence) -> Tuple[str, str]:
+        # The head and tail here is List[int]
+        # use set_tuple
+        s, r, o = sent.as_tuple()
+        x = self.encode_x(s, o, r)
+        y = self.encode_y(x, sent.text)
+        return x, y
+
+    def encode_to_line(self, sent: RelationSentence) -> str:
+        x, y = self.encode(sent)
+        return y + "\n"
+
+    def parse_line(self, line: str) -> Tuple[str, str]:
+        return "", line.strip()
+
+
+class TemplateGenerateEncoder(Encoder):
+    """
+    Template is the description from head, tail and relation.
+    We need to map the triplet into a template. 
+    Unfinished.
+    """
+    def decode_x(self, text: str) -> str:
+        front, back = text.split(" , Tail Entity : ")
+        tail = back[:-2]
+        head = front.split("Head Entity : ")[-1]
+
+        return head, tail
+
+    def decode_triplet(self, context: str, head: str, tail: str, label: str) -> RelationSentence:
+        # text is already the sentence
+        return RelationSentence.from_spans(context, head, tail, label)
+
+    def decode_y(self, text: str, head: str, tail: str, label: str) -> RelationSentence:
+        front, back = text.split(" . Context : ")
+        context = back[:-2]
+        return self.decode_triplet(context, head, tail, label)
+
+    def decode(self, y: str, head: str, tail: str, label: str) -> RelationSentence:
+        # The label from DS is just added
+        sent = self.decode_y(y, head, tail, label)
+        return sent
+
+    def decode_from_line(self, line: str) -> RelationSentence:
+        x, y = self.parse_line(line)
+        # We should provode line and triplets
+        return self.decode(x, y)
+
+    def encode_y(self, x: str, sen: str) -> str:
+        return f"{x} Context : {sen} ." 
+
+    def encode_x(self, s: str, o: str, r: str, dataset_name=None) -> str:
+        # We should normalize the relation
+        # For nyt10m, we just split "/" and replace "_" with space
+        # r = r.replace("_", " ").replace("/", " / ")
+        # v2: just use the last relation name, replace _ with space
+        #if dataset_name is None:
+        #    # nyt10m default
+        #    r = r.split("/")[-1].replace("_", " ")
+        #if dataset_name == "re-tacred":
+        r = r.replace("per:", "person - ")
+        r = r.replace("org:", "organization - ")
         r = r.replace("/", " or ")
         r = r.replace("_", " ")
         # 其实就在这边添加一个Relation Words，根据relation，从dict中选择，生成即可。
@@ -288,6 +358,7 @@ class TripletGenerateEncoder(Encoder):
 
     def parse_line(self, line: str) -> Tuple[str, str]:
         return "", line.strip()
+
 
 class ExtractEncoder(Encoder):
     def encode_x(self, text: str) -> str:
@@ -373,6 +444,8 @@ def select_encoder(name: str) -> Encoder:
         head_tail_generate=HeadTailGenerateEncoder(),     # new added
         head_tail_generate_with_prefix=HeadTailGenerateWithPrefixEncoder(),     # new added
         triplet_generate=TripletGenerateEncoder(),
+        triplet=TripletGenerateEncoder(),
+        template=TemplateGenerateEncoder()
     )
     encoder = mapping[name]
     return encoder

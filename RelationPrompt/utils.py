@@ -29,6 +29,16 @@ def find_sublist_index(items: list, query: list):
             return i
     return -1
 
+def find_all_sublist_index(items: list, query: list):
+    """find all sublists' first index, return a start list.
+    If not found, return a empty list."""
+    length = len(query)
+    starts = []
+    for i in range(len(items) - length + 1):
+        if items[i : i + length] == query:
+            starts.append(i)
+    return starts
+
 
 def test_find_sublist_query():
     items = [1, 6, 3, 5, 7]
@@ -209,15 +219,15 @@ class RelationSentence(BaseModel):
 
     def is_valid(self) -> bool:
         # We can add length limitations
-        for x in [self.tokens, self.head, self.tail, self.label]:
-            if len(x) == 0:
-                print("len(x)==0, and return is_valid False!!!")
-                return False
-            if len(x) > 40:     # short sentence contain two entities are more 
-                print("sentence length is too long, and return False")
-                return False
+        if len(self.tokens) == 0:
+            print("len(x)==0, and return is_valid False!!!")
+            return False
+        if len(self.tokens) > 50:     # short sentence contain two entities are more 
+            print("sentence length is too long, and return False")
+            return False
         for x in [self.head, self.tail]:
             if -1 in x:
+                # can not find suitable entity for both head and tail
                 return False
         return True
 
@@ -228,14 +238,19 @@ class RelationSentence(BaseModel):
     @classmethod
     def from_spans(cls, text: str, head: str, tail: str, label: str, strict=True):
         tokens = text.split()
+        # input head is name, output is the index list
+        heads = find_all_spans(head, tokens)
+        tails = find_all_spans(tail, tokens)
+        head, tail = search_best_entity_pair(heads, tails)
         sent = cls(
             tokens=tokens,
-            head=find_span(head, tokens),
-            tail=find_span(tail, tokens),
+            head=head,
+            tail=tail,
             label=label,
         )
-        if strict:
-            assert sent.is_valid(), (head, label, tail, text)
+        # We check the validity in modeling, after generate 
+        #if strict:
+        #    assert sent.is_valid(), (head, label, tail, text)
         return sent
 
     def as_marked_text(self) -> str:
@@ -288,6 +303,73 @@ def find_span(span: str, tokens: List[str]) -> List[int]:
         return [-1] # I do not support substring entity, like input Hawaii but output Hawaiians 
         start, end = align_span_to_tokens(span, tokens)
         return list(range(start, end))
+
+def find_all_spans(span: str, tokens: List[str]) -> List[List[int]]:
+    """find all spans for entity.
+    If found, return a list of all possible index list.
+    Sentence: Yao ming is a basketball player , and Yao ming is very tall .
+                0   1   2 3     4       5     6  7   8    9   10 11   12  13
+    span=Yao Ming
+    return [[0, 1], [8,9]]
+    """
+    if span == "":
+        return []
+    starts = find_all_sublist_index(tokens, span.split())
+    all_span_indexes = []
+    if len(starts) > 0:
+        for start in starts:
+            all_span_indexes.append([start + i for i in range(len(span.split()))])
+    return all_span_indexes
+
+def search_best_entity_pair(heads, tails):
+    """Find a best entity pair in sentences.
+    Avoid:
+        head and tail are overlap, even same since head can be the same with tail in some triplets
+    Prefer:
+        The shorter distance between head and tail, the better.
+    Input:
+        a list contains possible span indexes
+        heads: List[List[int]]
+        tails: List[List[int]]
+    return ([head], [tail])
+    or None
+    """
+    best_head = [-1]
+    best_tail = [-1]
+    best_distance = 100
+    for head in heads:
+        for tail in tails:
+            if len(set(head) & set(tail)) == 0:
+                # get the distance
+                distance = calculate_distance_between_two_spans(head, tail)
+                if distance < best_distance:
+                    best_head = head
+                    best_tail = tail
+    return (best_head, best_tail)
+
+def calculate_distance_between_two_spans(head, tail):
+    """
+    input two sequences, calculate the distance
+    Example:
+    head = [0, 1]
+    tail = [4, 5, 6]
+    distance = 4-1= 3
+    Input: 
+        head: List[int]
+        tail: List[int]
+    Output:
+        int
+    """
+    # head -> tail
+    if head[-1] < tail[0]:
+        return tail[0] - head[-1]
+    # tail -> head
+    elif tail[-1] < head[0]:
+        return head[0] - tail[-1]
+    else:
+        print("Head and tail is overlapped! Please check! Exit!")
+        exit()
+
 
 
 def test_find_span(

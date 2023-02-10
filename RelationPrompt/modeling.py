@@ -208,19 +208,26 @@ class RelationGenerator(RelationModel):
     def generate_by_triplet(
         self, head: str, tail: str, rel: str, num: int, pipe: Pipeline
     ) -> Tuple[List[RelationSentence], List[str]]:
+        """
+        try several batches to generate candidate sentences
+        """
         set_seed(self.random_seed)
         encoder = self.get_encoder()
         prompt = encoder.encode_x(head, tail, rel)
         sents, raw = [], []
         errors = set()
 
-        while len(sents) < num:
+        tried_batch_num = 0
+        at_least_num = num * 5      # generate more sentences than it required, for following filter
+        while len(sents) < at_least_num:
             # The outputs is a batch size
+            # 还是不清楚这个pipe去哪了，返回的outputs包括什么。但下面是用"generated_text"
             outputs = pipe(
                 [prompt],
                 num_return_sequences=self.batch_size,
                 max_length=self.block_size,
             )
+            tried_batch_num += 1
             for output in outputs:
                 raw.append(output["generated_text"] + "\n")
                 x, y = encoder.parse_line(raw[-1])
@@ -232,15 +239,15 @@ class RelationGenerator(RelationModel):
                     errors.add(str(e))
 
             print("prompt", prompt)
-            if len(raw) > 10 * num:
-                print(f"Can not generte valid sentences for {prompt}")
+            if tried_batch_num > at_least_num:
+                print(f"Tried {tried_batch_num} batches. Output {len(sents)} but {at_least_num} required. ")
                 break
             print(dict(target=num, success=len(sents), raw=len(raw)))
 
         # there are some hard entity pairs
         # assert len(sents) >= num
         print(dict(prompt=prompt, success_rate=len(sents) / len(raw), errors=errors))
-        return sents[:num], raw
+        return sents, raw
 
 
     def run(

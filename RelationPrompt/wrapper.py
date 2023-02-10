@@ -22,7 +22,7 @@ def safe_divide(a: float, b: float) -> float:
     return a / b
 
 
-def convert_data(filename):
+def convert_RE_data(filename):
     """
     The format of re-tacred and semeval is unmatched with the input of RelationPrompt
     """
@@ -53,13 +53,68 @@ def convert_data(filename):
             "tail_name": tail_name,
             "label": label
         }
-        new_data.append(inst)
+        new_data.append(inst)   # 这个先不用了，直接用1-N的triplets
         triplet = f"{head_name}_{tail_name}_{label}"
         if triplet not in triplets:
             triplets[triplet] = [inst]
         else:
             triplets[triplet].append(inst)
-    return new_data
+    return triplets
+
+
+class HeadTailRelNum(BaseModel):
+    """不需要"""
+    head_name: str
+    tail_name: str
+    relation: str
+    number: int
+
+    def as_triplet_prompt(self,):
+        """感觉不需要，这个是encoder做的事"""
+        pass
+
+
+class TripletDataset(BaseModel):
+    """
+    The data structure for generation: triplet -> sentence
+    """
+    head_tail_rel_num: List
+
+    @classmethod
+    def convert(cls, line, num):
+        """convert untrain triplet input into HeadTailRelNum"""
+        inst = json.loads(line)
+        triplet = inst["triplet"]
+        head, tail, rel = triplet.split("#-#")
+        if "insts" in inst:
+            num = len(inst['insts'])
+        # return {"head": head, "tail": tail, "rel": rel, "num": num}
+        return [head, tail, rel, num]
+
+    @classmethod
+    def load(cls, path: str, num: int):
+        """num is the default number of required sentences for each triplet to generate"""
+        with open(path) as f:
+            head_tail_rel_num = [cls.convert(line, num) for line in f]
+        return cls(head_tail_rel_num=head_tail_rel_num)
+
+    def get_head_tail_rel_num(self) -> List:
+        # Maybe we can build the prompt, the x
+        return self.head_tail_rel_num
+    
+    def get_head_tail_template_num(self, rel2template) -> List:
+        """construct the template for each triplet, with a mapping dict
+        """
+        pass
+
+
+class GeneratedDataset(BaseModel):
+    """
+    The data structure for save generated sentences
+    {triplet: head_tail_rel, num: num, insts: [inst1, inst2, ...,]}
+    """
+    # 暂时也不用了，就生成后在convert中处理吧
+    pass
 
 
 class Sentence(BaseModel):
@@ -138,8 +193,9 @@ class Dataset(BaseModel):
         """We need to convert our dataset into target format.
         This is for re-tacred.
         We can refer the follow function load_fewrel, load_wiki."""
-        data = convert_data(path)
-        sents = [Sentence(**inst) for inst in data]
+        data = convert_RE_data(path)
+        # 我们将triplet改成head, tail, relation, number
+        sents = [Sentence(**{"triplets": list(insts)}) for insts in data.values()]
         return cls(sents=sents)
 
     def save(self, path: str):
@@ -322,7 +378,6 @@ class Generator(BaseModel):
         model.fit(path_train=path_train, path_dev=path_dev)     # CLM的训练只要输入训练集和测试集就行，因此，跟下面的generate们没关系
         delete_checkpoints(model.model_dir)
 
-    # 这些函数，会去modeling里调用相似名字的函数。但是，这些函数又是什么时候用的？？？上面的fit直接就跑了呀。
     def generate(self, labels: List[str], path_out: str):
         if Path(path_out).exists():
             return
@@ -388,7 +443,6 @@ class Generator(BaseModel):
         """
         Relation Head Tail to Sentence
         Add number of sentences for each triplet to generate.
-        add number item in heads_tails_relations
         """
         if Path(path_out).exists():
             print(f"{path_out} exist!!!")
@@ -400,8 +454,18 @@ class Generator(BaseModel):
         assert isinstance(model, RelationGenerator)
         for head, tail, relation, num in tqdm(heads_tails_relations_nums):
             # set the num_gen_per_label here
+            # 我感觉在这边就准备好prompt，而model里就只有一个generate就行。因为generate都是一样的。
+            # 但是,encoder是放在model里了，确实放model里比较合理。
             triplets, raw = model.generate_by_triplet(head, tail, relation, num, pipe=pipe)
+            # 总觉得下面这步是多余的，我这边的输出triplets，直接就是sents
+            # 稍微有点区别，generate输出的是[RelationSentence]
+            # 下面的是[Sentence]，而Sentence是List[RelationSentence]
+            # 这边的话，则是每个Sentence下只有一个元素的list
+            # 最后的Dataset则是List[Sentence]
             for t in triplets:
+                # get the value of t.text, if not exist, set t.text:[], and return the value.
+                # t.text is the " ".join(tokens), a @property in Sentence
+                # text as key, all same sentences as value
                 groups.setdefault(t.text, []).append(t)
 
         sents = [Sentence(triplets=lst) for lst in groups.values()]
@@ -437,6 +501,7 @@ class Generator(BaseModel):
             for triplet in triplets:
                 writer.write(json.dumps(triplet) + '\n')
 
+    # 这个没准就是template的实现？看看，修改
     def generate_by_head_tail_description(self, inputs: List, path_out: str):
         """
         Head Tail Description to Sentence
