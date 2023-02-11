@@ -1,7 +1,7 @@
 import os
 
 cuda = 0
-dataset = "re-tacred_0.1_for_generation"
+dataset = "re-tacred_0.1"
 scale = "1.0"
 seed = 0
 prompt = "triplet"

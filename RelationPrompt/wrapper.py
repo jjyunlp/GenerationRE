@@ -466,6 +466,7 @@ class Generator(BaseModel):
                 # get the value of t.text, if not exist, set t.text:[], and return the value.
                 # t.text is the " ".join(tokens), a @property in Sentence
                 # text as key, all same sentences as value
+                # 我们不需要用text作为key等，直接上一步得到的数据做一些处理就好。但，影响不大，我后面做处理的。
                 groups.setdefault(t.text, []).append(t)
 
         sents = [Sentence(triplets=lst) for lst in groups.values()]

@@ -176,7 +176,7 @@ if __name__ == "__main__":
     builder = BuildSemiSupervisedScenario(train_NonNA_data)
     labeled_triplet2insts, unlabeled_triplet2insts = builder.split_data_by_triplets(labeled_proportion=0.5)
 
-    base_dir = f"/home/jjyu/GenerationForRE/Benchmark/{dataset}_for_generation"
+    base_dir = f"/home/jjyu/GenerationForRE/DatasetForGeneration/{dataset}"
     if not os.path.exists(base_dir):
         os.makedirs(base_dir)
     scales = [0.1, 0.2, 0.5]

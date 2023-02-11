@@ -113,14 +113,14 @@ if __name__ == "__main__":
     file_kwargs = dict(train_file=train_file,
                      val_file=val_file,
                      test_file=test_file)
-    data_dir = f"../Benchmark/{args.dataset}"
+    data_dir = f"../DatasetForGeneration/{args.dataset}"
     gpt_size = "gpt2-large"
     output_dir = f"/data/jjyu/RE_Sentence_Generation/Fine_tuned_model/{args.dataset}/scale{args.scale}_seed{args.seed}/{gpt_size}"
     if not os.path.isdir(output_dir):
         os.makedirs(output_dir)
 
 
-    PLM_path = f"/home/jjyu/PLMs/from_huggingface/{gpt_size}/"
+    PLM_path = f"/data/jjyu/PLMs/from_huggingface/{gpt_size}/"
     dir_kwargs = dict(
         data_dir=data_dir,
         output_dir=output_dir,

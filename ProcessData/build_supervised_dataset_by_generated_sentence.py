@@ -15,6 +15,10 @@ from re import T
 from typing import List
 from pydantic.main import BaseModel
 
+import sys
+print(sys.path)
+sys.path.insert(0, "/home/jjyu/GenerationForRE" )
+print(sys.path)
 from REUtils.data_transform import load_triplet_data, load_data_by_line, dump_data_by_line
 from REUtils.data_transform import build_key2valueList_dict
 
@@ -358,12 +362,14 @@ class RPdataIntoREData():
             else:
                 head_name = inst['head_name']
                 tail_name = inst['tail_name']
-
+            rel = inst['label']
+            triplet = f"{head_name}#-#{tail_name}#-#{rel}"
             opennre_inst = {
+                'triplet': triplet,
                 'token': token,
                 'h': {'pos': h_pos, 'name': head_name},
                 't': {'pos': t_pos, 'name': tail_name},
-                'relation': inst['label']
+                'relation': rel
             }
             opennre_data.append(opennre_inst)
         return opennre_data
@@ -440,10 +446,16 @@ class CollectGeneratedData():
         for triplet, insts in self.triplet2insts.items():
             num = self.triplet2num[triplet]
             if len(insts) > num:
-                output_data += insts
-            else:
                 output_data += insts[:num]
+            else:
+                output_data += insts
         return output_data
+
+    def fill_sentences_for_triplet_with_template(self, ):
+        """
+        必须跟原来的一模一样，因此，西安遍历triplet2num，若triplet没有，则用template
+        """
+        pass
 
 
 class TripletDataset(BaseModel):
@@ -503,6 +515,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--scale", type=str, default="1.0", required=True, help="1.0 means use all training data. Others are 0.1, 0.2, 0.5")
     parser.add_argument("--seed", type=int, required=True)
+    parser.add_argument("--gpt", type=str, default="gpt-large", choices=["gpt2-large", "gpt2-medium", "gpt2"])
     parser.add_argument("--prompt", type=str, default="template", choices=["triplet", "template", "qa"])
     args = parser.parse_args()
 
@@ -512,67 +525,53 @@ if __name__ == "__main__":
     # collect sentences under the number constraint. If exists more, then cut, else (1) ignore, (2) add templates
 
     base_dir = "/data/jjyu/RE_Sentence_Generation/Fine_tuned_model/"
-    generated_datadir = os.path.join(base_dir, args.dataset, f"scale{args.scale}_seed{args.seed}", args.prompt, "generator", "output_data")
+    generated_datadir = os.path.join(base_dir, args.dataset, f"scale{args.scale}_seed{args.seed}", args.gpt, args.prompt, "generator", "output_data")
     generated_data_file = os.path.join(generated_datadir, "synthetic_sentence_for_untrain_triplet.json")
     generated_data = load_triplet_data(generated_data_file)
     print(f"generated data size before convert: {len(generated_data)}")
+    
     # convert RP data into RE data for generated dataset.
     convertor = RPdataIntoREData()
     generated_data = convertor.convert_relationprompt_into_opennre(generated_data)
     print(f"generated data size: {len(generated_data)}")
     generated_triplet2insts = convertor.build_triplet2insts(generated_data, sep="#-#")
+    print(f"number of triplet: {len(generated_triplet2insts)}")
 
-    data_dir = "/home/jjyu/GenerationForRE/Benchmark"
-    untrain_triplet_file = os.path.join(data_dir, args.dataset, "untrain_triplet.txt")
+    data_dir = f"/home/jjyu/GenerationForRE/DatasetForGeneration/{args.dataset}"
+    untrain_triplet_file = os.path.join(data_dir, "untrain_triplet.txt")
     untrain_triplet2num= load_triplet2num(untrain_triplet_file)
+    print(untrain_triplet2num)
     collector = CollectGeneratedData(generated_triplet2insts, untrain_triplet2num)
     collected_generated_data = collector.fill_sentences_for_triplet()
-    print(collected_generated_data)
-    exit()
+    print(collected_generated_data[0])
+    print(len(collected_generated_data))
 
-    RE_datadir = f"../benchmark/{args.dataset}_RE/"     # the small dataset comes from the original human-annotated data
-    RE_dataset = f"{args.dataset}_RE"
+    # Second, to get human-annotated training set
+    train_file = f"train_sentence_scale{args.scale}_seed{args.seed}.txt"
+    if args.scale == "1.0":
+        train_file = "train_sentence.txt"
+    train_data = load_data_by_line(os.path.join(data_dir, train_file))
+    train_NA_file = os.path.join(data_dir, "train_sentence_NA.txt") 
+    train_NA_data = load_data_by_line(train_NA_file)
 
+    output_RE_datadir =  f"/home/jjyu/GenerationForRE/DatasetForTrainRE/{args.dataset}_scale{args.scale}_seed{args.seed}_{args.gpt}_{args.prompt}"
+    if not os.path.exists(output_RE_datadir):
+        os.makedirs(output_RE_datadir)
+    new_train_file = os.path.join(output_RE_datadir, "train.txt")
 
-    RP_datadir = f"../benchmark/{args.dataset}_RP/"     # convert the small dataset into RelationPrompt formation
-    RP_dataset = f"{args.dataset}_RP"
-
-    target_datadir = f"../benchmark/{args.dataset}_Generated"            # the final dataset for train the RE model
-    target_dataset = f"{args.dataset}_Generated"     # the final dataset with generated sentences
-    if not os.path.exists(RP_datadir):
-        print(f"Input dataset is not exist: {RP_datadir}")
-        exit()
-    if not os.path.exists(RE_datadir):
-        print(f"Input dataset is not exist: {RE_datadir}")
-        exit()
-    if not os.path.exists(target_datadir):
-        print(f"Create output dataset folder: {target_datadir}")
-        os.mkdir(target_datadir)
-
-    human_train_data_file = os.path.join(RE_datadir, f"{RE_dataset}_train.txt")
-    human_data = load_data_by_line(human_train_data_file)
-    print(f"small train data size: {len(human_data)}")
-
-    human_NA_data_file = os.path.join(RE_datadir, f"{RE_dataset}_train_NA.txt")
-    human_NA_data = load_data_by_line(human_NA_data_file)
-    print(f"train NA data size: {len(human_NA_data)}")
-
-
-    train_data = human_data + human_NA_data + generated_data
-    train_data_file = os.path.join(target_datadir, f"{target_dataset}_train.txt")
-    dump_data_by_line(train_data, train_data_file)
+    dump_data_by_line(collected_generated_data + train_data + train_NA_data, new_train_file)
 
     # original val set, test set, rel2id_file
     base_dataset = args.dataset.split("_")[0]
     if base_dataset not in ['re-tacred', 'semeval']:
         print(f"Error base dataset: {base_dataset} from input dataset: {args.dataset}")
         exit()
-    base_datadir = f"../benchmark/{base_dataset}"
-    copy_val = f"cp {base_datadir}/{base_dataset}_val.txt {target_datadir}/{target_dataset}_val.txt"
+    base_datadir = f"../Dataset/{base_dataset}"
+    copy_val = f"cp {base_datadir}/{base_dataset}_val.txt {output_RE_datadir}/val.txt"
     os.system(copy_val)
-    copy_test = f"cp {base_datadir}/{base_dataset}_test.txt {target_datadir}/{target_dataset}_test.txt"
+    copy_test = f"cp {base_datadir}/{base_dataset}_test.txt {output_RE_datadir}/test.txt"
     os.system(copy_test)
-    copy_rel2id = f"cp {base_datadir}/{base_dataset}_rel2id.json {target_datadir}/{target_dataset}_rel2id.json"
+    copy_rel2id = f"cp {base_datadir}/{base_dataset}_rel2id.json {output_RE_datadir}/rel2id.json"
     os.system(copy_rel2id)
 
 
