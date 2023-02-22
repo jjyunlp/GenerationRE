@@ -3,6 +3,10 @@ import random
 import argparse
 from pathlib import Path
 from wrapper import Generator, Extractor, Dataset, TripletDataset
+import sys
+print(sys.path)
+sys.path.insert(0, "/home/jjyu/GenerationForRE" )
+from REUtils.data_io import load_data_from_file
 
 """
 2022-09-21, Junjie Yu, Soochow University
@@ -16,6 +20,9 @@ Wrap all the generator should do:
 1. training the model by NonNA triplets with multiple supporting sentences.
 2. Do quality test on the synthetic sentences:
     2.1. train the model by synthetic data and output results
+
+2023-02-14, Junjie Yu, Soochow University
+Add template.
 """
 
 
@@ -35,6 +42,7 @@ class GenerateData():
         # process the datasets
         self.input_file = file_kwargs["input_file"]
         self.output_file = file_kwargs["output_file"]
+        self.template_file = file_kwargs["template_file"]
 
         # the model dir after fine-tuning the GPT
         self.generator_dir = dir_kwargs['generator_dir']
@@ -85,8 +93,18 @@ class GenerateData():
             if debug_num > 0:
                 input_triplets = input_triplets[:debug_num]
             generator.generate_by_triplet(input_triplets, path_out=self.output_file)
-        elif generator.generate_by_template():
-            pass
+        elif encoder_name == "template" or encoder_name == "templateV2" or encoder_name == "templateV3":
+            # {"relation": X, "template": Y, "QA": Z}
+            info_data = load_data_from_file(self.template_file)
+            rel2template = {}
+            for inst in info_data:
+                relation = inst['relation']
+                template = inst['template']
+                rel2template[relation] = template
+            input_triplets = input_data.get_head_tail_rel_template_num(rel2template)
+            if debug_num > 0:
+                input_triplets = input_triplets[:debug_num]
+            generator.generate_by_template(input_triplets, path_out=self.output_file)
         else:
             print(f"Error encoder name: {encoder_name}")
         print("End generation.")
@@ -177,7 +195,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--scale", type=str, default="1.0", required=True, help="1.0 means use all training data. Others are 0.1, 0.2, 0.5")
     parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--prompt", type=str, default="template", choices=["triplet", "template", "qa"])
+    parser.add_argument("--prompt", type=str, default="template")
     parser.add_argument("--debug_num", type=int, default=-1)
     args = parser.parse_args()
 
@@ -192,6 +210,7 @@ if __name__ == "__main__":
     data_dir = f"../DatasetForGeneration/{args.dataset}"
     # We need input triplet and its number of supporting sentences in original dataset
     input_file = f"{data_dir}/untrain_triplet.txt"  # triplet:[inst, inst, ...]
+    template_file = f"{data_dir}/rel2info.txt"
     output_file = f"{generator_dir}/output_data/synthetic_sentence_for_untrain_triplet.json"
 
     if args.debug_num > 0:
@@ -199,7 +218,8 @@ if __name__ == "__main__":
     if not os.path.exists(os.path.dirname(output_file)):
         os.makedirs(os.path.dirname(output_file))
     file_kwargs = dict(input_file=input_file,
-                       output_file=output_file)
+                       output_file=output_file,
+                       template_file=template_file)
 
     dir_kwargs = dict(
         generator_dir=generator_dir,

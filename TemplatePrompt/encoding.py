@@ -299,7 +299,7 @@ class TemplateGenerateEncoder(Encoder):
     Unfinished.
     """
     def decode_x(self, text: str) -> str:
-        front, back = text.split(" , Tail Entity : ")
+        front, back = text.split(" Sentence : ")
         tail = back[:-2]
         head = front.split("Head Entity : ")[-1]
 
@@ -310,7 +310,7 @@ class TemplateGenerateEncoder(Encoder):
         return RelationSentence.from_spans(context, head, tail, label)
 
     def decode_y(self, text: str, head: str, tail: str, label: str) -> RelationSentence:
-        front, back = text.split(" . Context : ")
+        front, back = text.split(" . Sentence : ")
         context = back[:-2]
         return self.decode_triplet(context, head, tail, label)
 
@@ -325,19 +325,169 @@ class TemplateGenerateEncoder(Encoder):
         return self.decode(x, y)
 
     def encode_y(self, x: str, sen: str) -> str:
-        return f"{x} Context : {sen} ." 
+        return f"{x} Sentence : {sen} ." 
 
-    def encode_x(self, s: str, o: str, r: str, dataset_name=None) -> str:
-        
-        # 其实就在这边添加一个Relation Words，根据relation，从dict中选择，生成即可。
-        return f"Relation : {r} , Head Entity : {s} , Tail Entity : {o} ."
+    def encode_x(self, s: str, o: str, template: str, dataset_name=None) -> str:
+        # template, e.g., person [X] has the same identity with person [Y]
+        template = template.replace("[X]", s)
+        template = template.replace("[Y]", o)
+        return f"Template : {template} ."
+    
+    def encode_prompt(self, s: str, o: str, template: str, dataset_name=None) -> str:
+        """I think we should add Sentence :
+        It is different from encode_x
+        """
+        x = self.encode_x(s, o, template)
+        return f"{x} Sentence :"
 
 
     def encode(self, sent: RelationSentence) -> Tuple[str, str]:
         # The head and tail here is List[int]
         # use set_tuple
         s, r, o = sent.as_tuple()
-        x = self.encode_x(s, o, r)
+        template = sent.template
+
+        x = self.encode_x(s, o, template)
+        y = self.encode_y(x, sent.text)
+        return x, y
+
+    def encode_to_line(self, sent: RelationSentence) -> str:
+        x, y = self.encode(sent)
+        return y + "\n"
+
+    def parse_line(self, line: str) -> Tuple[str, str]:
+        return "", line.strip()
+
+
+class TemplateV2GenerateEncoder(Encoder):
+    """
+    TemplateV2 is the description from head, tail and relation.
+    We need to map the triplet into a template. 
+    Add "" to wrap entity in template.
+    E.g., person " Yao Ming " was born in city " Shang hai "
+    But sentence do not use "" to wrap. Maybe in TemplateV3 we can do this
+    """
+    def decode_x(self, text: str) -> str:
+        front, back = text.split(" Sentence : ")
+        tail = back[:-2]
+        head = front.split("Head Entity : ")[-1]
+
+        return head, tail
+
+    def decode_triplet(self, context: str, head: str, tail: str, label: str) -> RelationSentence:
+        # text is already the sentence
+        return RelationSentence.from_spans(context, head, tail, label)
+
+    def decode_y(self, text: str, head: str, tail: str, label: str) -> RelationSentence:
+        front, back = text.split(" . Sentence : ")
+        context = back[:-2]
+        return self.decode_triplet(context, head, tail, label)
+
+    def decode(self, y: str, head: str, tail: str, label: str) -> RelationSentence:
+        # The label from DS is just added
+        sent = self.decode_y(y, head, tail, label)
+        return sent
+
+    def decode_from_line(self, line: str) -> RelationSentence:
+        x, y = self.parse_line(line)
+        # We should provode line and triplets
+        return self.decode(x, y)
+
+    def encode_y(self, x: str, sen: str) -> str:
+        return f"{x} Sentence : {sen} ." 
+
+    def encode_x(self, s: str, o: str, template: str, dataset_name=None) -> str:
+        # template, e.g., person [X] has the same identity with person [Y]
+        s = f"\" {s} \""
+        o = f"\" {o} \""
+        template = template.replace("[X]", s)
+        template = template.replace("[Y]", o)
+        return f"Template : {template} ."
+    
+    def encode_prompt(self, s: str, o: str, template: str, dataset_name=None) -> str:
+        """I think we should add Sentence :
+        It is different from encode_x
+        """
+        x = self.encode_x(s, o, template)
+        return f"{x} Sentence :"
+
+
+    def encode(self, sent: RelationSentence) -> Tuple[str, str]:
+        # The head and tail here is List[int]
+        # use set_tuple
+        s, r, o = sent.as_tuple()
+        template = sent.template
+
+        x = self.encode_x(s, o, template)
+        y = self.encode_y(x, sent.text)
+        return x, y
+
+    def encode_to_line(self, sent: RelationSentence) -> str:
+        x, y = self.encode(sent)
+        return y + "\n"
+
+    def parse_line(self, line: str) -> Tuple[str, str]:
+        return "", line.strip()
+
+
+class TemplateV3GenerateEncoder(Encoder):
+    """
+    TemplateV3 is 
+    Template: XX, Head : Tail. Sen
+    Without ""
+    """
+    def decode_x(self, text: str) -> str:
+        front, back = text.split(" Sentence : ")
+        tail = back[:-2]
+        head = front.split("Head Entity : ")[-1]
+
+        return head, tail
+
+    def decode_triplet(self, context: str, head: str, tail: str, label: str) -> RelationSentence:
+        # text is already the sentence
+        return RelationSentence.from_spans(context, head, tail, label)
+
+    def decode_y(self, text: str, head: str, tail: str, label: str) -> RelationSentence:
+        front, back = text.split(" . Sentence : ")
+        context = back[:-2]
+        return self.decode_triplet(context, head, tail, label)
+
+    def decode(self, y: str, head: str, tail: str, label: str) -> RelationSentence:
+        # The label from DS is just added
+        sent = self.decode_y(y, head, tail, label)
+        return sent
+
+    def decode_from_line(self, line: str) -> RelationSentence:
+        x, y = self.parse_line(line)
+        # We should provode line and triplets
+        return self.decode(x, y)
+
+    def encode_y(self, x: str, sen: str) -> str:
+        return f"{x} Sentence : {sen} ." 
+
+    def encode_x(self, s: str, o: str, template: str, dataset_name=None) -> str:
+        # template, e.g., person [X] has the same identity with person [Y]
+        #s = f"\" {s} \""
+        #o = f"\" {o} \""
+        template = template.replace("[X]", s)
+        template = template.replace("[Y]", o)
+        return f"Template : {template} , Head Entity : {s} , Tail Entity : {o} ."
+    
+    def encode_prompt(self, s: str, o: str, template: str, dataset_name=None) -> str:
+        """I think we should add Sentence :
+        It is different from encode_x
+        """
+        x = self.encode_x(s, o, template)
+        return f"{x} Sentence :"
+
+
+    def encode(self, sent: RelationSentence) -> Tuple[str, str]:
+        # The head and tail here is List[int]
+        # use set_tuple
+        s, r, o = sent.as_tuple()
+        template = sent.template
+
+        x = self.encode_x(s, o, template)
         y = self.encode_y(x, sent.text)
         return x, y
 
@@ -434,7 +584,9 @@ def select_encoder(name: str) -> Encoder:
         head_tail_generate_with_prefix=HeadTailGenerateWithPrefixEncoder(),     # new added
         triplet_generate=TripletGenerateEncoder(),
         triplet=TripletGenerateEncoder(),
-        template=TemplateGenerateEncoder()
+        template=TemplateGenerateEncoder(),
+        templateV2=TemplateV2GenerateEncoder(),
+        templateV3=TemplateV3GenerateEncoder()  # Template, Head, Tail, Sentence
     )
     encoder = mapping[name]
     return encoder

@@ -10,6 +10,7 @@ Merge human-annotated, NA data.
 import os
 import json
 import argparse
+import random
 import logging
 from re import T
 from typing import List
@@ -508,6 +509,13 @@ def load_triplet2num(input_file):
             triplet2num[triplet] = num
     return triplet2num
 
+def copy_val_test_rel2id(from_datadir, to_datadir, dataset_name):
+    copy_val = f"cp {from_datadir}/{dataset_name}_val.txt {to_datadir}/val.txt"
+    os.system(copy_val)
+    copy_test = f"cp {from_datadir}/{dataset_name}_test.txt {to_datadir}/test.txt"
+    os.system(copy_test)
+    copy_rel2id = f"cp {from_datadir}/{dataset_name}_rel2id.json {to_datadir}/rel2id.json"
+    os.system(copy_rel2id)
 
 
 if __name__ == "__main__":
@@ -516,63 +524,89 @@ if __name__ == "__main__":
     parser.add_argument("--scale", type=str, default="1.0", required=True, help="1.0 means use all training data. Others are 0.1, 0.2, 0.5")
     parser.add_argument("--seed", type=int, required=True)
     parser.add_argument("--gpt", type=str, default="gpt-large", choices=["gpt2-large", "gpt2-medium", "gpt2"])
-    parser.add_argument("--prompt", type=str, default="template", choices=["triplet", "template", "qa"])
+    parser.add_argument("--prompt", type=str, default="template")
     args = parser.parse_args()
 
-    # We obtain a generated data, a special format.
-    # Collect instances into triplet2[insts], the inst is the RE format
-    # Obtain triplet2num, the number of sentences for each triplet in original training set.
-    # collect sentences under the number constraint. If exists more, then cut, else (1) ignore, (2) add templates
-
-    base_dir = "/data/jjyu/RE_Sentence_Generation/Fine_tuned_model/"
-    generated_datadir = os.path.join(base_dir, args.dataset, f"scale{args.scale}_seed{args.seed}", args.gpt, args.prompt, "generator", "output_data")
-    generated_data_file = os.path.join(generated_datadir, "synthetic_sentence_for_untrain_triplet.json")
-    generated_data = load_triplet_data(generated_data_file)
-    print(f"generated data size before convert: {len(generated_data)}")
-    
-    # convert RP data into RE data for generated dataset.
-    convertor = RPdataIntoREData()
-    generated_data = convertor.convert_relationprompt_into_opennre(generated_data)
-    print(f"generated data size: {len(generated_data)}")
-    generated_triplet2insts = convertor.build_triplet2insts(generated_data, sep="#-#")
-    print(f"number of triplet: {len(generated_triplet2insts)}")
-
     data_dir = f"/home/jjyu/GenerationForRE/DatasetForGeneration/{args.dataset}"
-    untrain_triplet_file = os.path.join(data_dir, "untrain_triplet.txt")
-    untrain_triplet2num= load_triplet2num(untrain_triplet_file)
-    print(untrain_triplet2num)
-    collector = CollectGeneratedData(generated_triplet2insts, untrain_triplet2num)
-    collected_generated_data = collector.fill_sentences_for_triplet()
-    print(collected_generated_data[0])
-    print(len(collected_generated_data))
-
-    # Second, to get human-annotated training set
-    train_file = f"train_sentence_scale{args.scale}_seed{args.seed}.txt"
-    if args.scale == "1.0":
-        train_file = "train_sentence.txt"
-    train_data = load_data_by_line(os.path.join(data_dir, train_file))
-    train_NA_file = os.path.join(data_dir, "train_sentence_NA.txt") 
-    train_NA_data = load_data_by_line(train_NA_file)
-
-    output_RE_datadir =  f"/home/jjyu/GenerationForRE/DatasetForTrainRE/{args.dataset}_scale{args.scale}_seed{args.seed}_{args.gpt}_{args.prompt}"
-    if not os.path.exists(output_RE_datadir):
-        os.makedirs(output_RE_datadir)
-    new_train_file = os.path.join(output_RE_datadir, "train.txt")
-
-    dump_data_by_line(collected_generated_data + train_data + train_NA_data, new_train_file)
-
     # original val set, test set, rel2id_file
     base_dataset = args.dataset.split("_")[0]
     if base_dataset not in ['re-tacred', 'semeval']:
         print(f"Error base dataset: {base_dataset} from input dataset: {args.dataset}")
         exit()
     base_datadir = f"../Dataset/{base_dataset}"
-    copy_val = f"cp {base_datadir}/{base_dataset}_val.txt {output_RE_datadir}/val.txt"
-    os.system(copy_val)
-    copy_test = f"cp {base_datadir}/{base_dataset}_test.txt {output_RE_datadir}/test.txt"
-    os.system(copy_test)
-    copy_rel2id = f"cp {base_datadir}/{base_dataset}_rel2id.json {output_RE_datadir}/rel2id.json"
-    os.system(copy_rel2id)
 
+    # Firstly, to get human-annotated training set
+    train_file = f"train_sentence_scale{args.scale}_seed{args.seed}.txt"
+    if args.scale == "1.0":
+        train_file = "train_sentence.txt"
+    train_data = load_data_by_line(os.path.join(data_dir, train_file))
+    train_NA_file = os.path.join(data_dir, "train_sentence_NA.txt") 
+    train_NA_data = load_data_by_line(train_NA_file)
+    # We obtain a generated data, a special format.
+    # Collect instances into triplet2[insts], the inst is the RE format
+    # Obtain triplet2num, the number of sentences for each triplet in original training set.
+    # collect sentences under the number constraint. If exists more, then cut, else (1) ignore, (2) add templates
+    collect_generated = True
+    if collect_generated:
+        base_dir = "/data/jjyu/RE_Sentence_Generation/Fine_tuned_model/"
+        generated_datadir = os.path.join(base_dir, args.dataset, f"scale{args.scale}_seed{args.seed}", args.gpt, args.prompt, "generator", "output_data")
+        generated_data_file = os.path.join(generated_datadir, "synthetic_sentence_for_untrain_triplet.json")
+        generated_data = load_triplet_data(generated_data_file)
+        print(f"generated data size before convert: {len(generated_data)}")
+        
+        # convert RP data into RE data for generated dataset.
+        convertor = RPdataIntoREData()
+        generated_data = convertor.convert_relationprompt_into_opennre(generated_data)
+        print(f"generated data size: {len(generated_data)}")
+        generated_triplet2insts = convertor.build_triplet2insts(generated_data, sep="#-#")
+        print(f"number of triplet: {len(generated_triplet2insts)}")
 
+        untrain_triplet_file = os.path.join(data_dir, "untrain_triplet.txt")
+        untrain_triplet2num= load_triplet2num(untrain_triplet_file)
+        print(untrain_triplet2num)
+        collector = CollectGeneratedData(generated_triplet2insts, untrain_triplet2num)
+        collected_generated_data = collector.fill_sentences_for_triplet()
+        print(collected_generated_data[0])
+        print(len(collected_generated_data))
+
+        output_RE_datadir =  f"/home/jjyu/GenerationForRE/DatasetForTrainRE/{args.dataset}_scale{args.scale}_seed{args.seed}_{args.gpt}_{args.prompt}"
+        if not os.path.exists(output_RE_datadir):
+            os.makedirs(output_RE_datadir)
+        new_train_file = os.path.join(output_RE_datadir, "train.txt")
+
+        dump_data_by_line(collected_generated_data + train_data + train_NA_data, new_train_file)
+
+        copy_val_test_rel2id(base_datadir, output_RE_datadir, base_dataset)
+
+    # Meanwhile, we should build the bottom and ceiling dataset
+    # bottom: only training set (the selected small part)
+    # ceiling: the selected small training set with annotated data for untrain triplets
+    if False:
+        bottom_RE_datadir =  f"/home/jjyu/GenerationForRE/DatasetForTrainRE/{args.dataset}_scale{args.scale}_seed{args.seed}_bottom"
+        if not os.path.exists(bottom_RE_datadir):
+            os.makedirs(bottom_RE_datadir)
+        dump_data_by_line(train_data + train_NA_data, os.path.join(bottom_RE_datadir, "train.txt"))
+        copy_val_test_rel2id(base_datadir, bottom_RE_datadir, base_dataset)
+    if False:
+        # a balanced dataset by randomly repeat the NonNA sentences
+        bottom_padding_RE_datadir =  f"/home/jjyu/GenerationForRE/DatasetForTrainRE/{args.dataset}_scale{args.scale}_seed{args.seed}_bottom_padding"
+        if not os.path.exists(bottom_padding_RE_datadir):
+            os.makedirs(bottom_padding_RE_datadir)
+        untrain_sentence_file = os.path.join(data_dir, "untrain_sentence.txt")
+        annotated_data_for_untrain = load_data_by_line(untrain_sentence_file)
+        padding_size = len(annotated_data_for_untrain)
+        scale_num = int(padding_size/len(train_data)) + 1
+        repeat_data = train_data * scale_num
+        random.shuffle(repeat_data)
+        repeat_data = repeat_data[:padding_size]
+        dump_data_by_line(train_data + repeat_data + train_NA_data, os.path.join(bottom_padding_RE_datadir, "train.txt"))
+        copy_val_test_rel2id(base_datadir, bottom_padding_RE_datadir, base_dataset)
+    if False:
+        top_RE_datadir =  f"/home/jjyu/GenerationForRE/DatasetForTrainRE/{args.dataset}_scale{args.scale}_seed{args.seed}_top"
+        if not os.path.exists(top_RE_datadir):
+            os.makedirs(top_RE_datadir)
+        untrain_sentence_file = os.path.join(data_dir, "untrain_sentence.txt")
+        annotated_data_for_untrain = load_data_by_line(untrain_sentence_file)
+        dump_data_by_line(train_data + annotated_data_for_untrain + train_NA_data, os.path.join(top_RE_datadir, "train.txt"))
+        copy_val_test_rel2id(base_datadir, top_RE_datadir, base_dataset)
 

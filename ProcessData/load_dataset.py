@@ -1,5 +1,5 @@
 import os
-from data_load_and_dump import load_data_from_file, load_labels_from_file
+from REUtils.data_io import load_data_from_file, load_labels_from_file
 
 
 class LoadDataset():

@@ -32,9 +32,6 @@ def find_sublist_index(items: list, query: list):
 def find_all_sublist_index(items: list, query: list):
     """find all sublists' first index, return a start list.
     If not found, return a empty list."""
-    # no case sensitivity
-    items = [tok.lower() for tok in items]
-    query = [tok.lower() for tok in query]
     length = len(query)
     starts = []
     for i in range(len(items) - length + 1):
@@ -213,6 +210,7 @@ class RelationSentence(BaseModel):
     zerorc_included: bool = True
     template: str = ""      # For TemplatePrompt
 
+
     def as_tuple(self) -> Tuple[str, str, str]:
         head = " ".join([self.tokens[i] for i in self.head])
         tail = " ".join([self.tokens[i] for i in self.tail])
@@ -343,13 +341,12 @@ def search_best_entity_pair(heads, tails):
     best_distance = 100
     for head in heads:
         for tail in tails:
-            if len(set(head) & set(tail)) == 0:     # no overlap
+            if len(set(head) & set(tail)) == 0:
                 # get the distance
                 distance = calculate_distance_between_two_spans(head, tail)
                 if distance < best_distance:
                     best_head = head
                     best_tail = tail
-                    best_distance = distance
     return (best_head, best_tail)
 
 def calculate_distance_between_two_spans(head, tail):
@@ -632,17 +629,10 @@ class WikiDataset:
 if __name__ == "__main__":
     """
     python new_utils.py analyze_relation_data --path data/relations/trex/100000.jsonl
+    """
     test_find_sublist_query()
     test_load_wiki()
     test_compute_prf()
     test_glob_rmtree()
     test_find_sublist_indices()
     Fire()
-    """
-    h = [[0, 1], [4,5]]
-    t = [[5], [2], [9]]
-    print(search_best_entity_pair(h, t))
-    tokens = ["John", "Kerry", ",", "the", "Democratic", "Senator", "from", "Massachusetts", ",", "was", "born", "John", "kerry", "Macdonald", "in", "Middletown", ",", "Conn", "."]
-    query = ["John", "kerry"]
-    print(find_all_sublist_index(tokens, query))
-

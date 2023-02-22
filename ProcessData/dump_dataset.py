@@ -1,5 +1,5 @@
 import os
-from data_load_and_dump import dump_data_to_file, dump_labels_to_file
+from REUtils.data_io import dump_data_to_file, dump_labels_to_file
 
 class DumpDataset():
     """a base class for dumping datasets"""

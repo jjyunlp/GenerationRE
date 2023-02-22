@@ -130,4 +130,7 @@ dmypy.json
 
 # Datasets
 Dataset/
-Benchmark/
+DatasetForGeneration/
+DatasetForRE/
+DatasetForTrainRE/
+

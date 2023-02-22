@@ -96,7 +96,7 @@ if __name__ == "__main__":
     parser.add_argument("--dataset", type=str, required=True)
     parser.add_argument("--scale", type=str, default="1.0", required=True, help="1 means use all training data. Others are 0.1, 0.2, 0.5")
     parser.add_argument("--seed", type=int, required=True)
-    parser.add_argument("--prompt", type=str, default="template", choices=["triplet", "template", "qa"])
+    parser.add_argument("--prompt", type=str, default="relation_generation")
     args = parser.parse_args()
 
     training_kwargs = dict(seed=args.seed, encoder_name=args.prompt)

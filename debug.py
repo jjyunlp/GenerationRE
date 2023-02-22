@@ -1,4 +1,6 @@
 from pydantic.main import BaseModel
+import torch.nn as nn
+import torch
 
 class A():
     aa = "aa"
@@ -48,3 +50,21 @@ if __name__ == "__main__":
         for j in b:
             print(i, j)
             print("i,j")
+    
+    t = torch.Tensor([1,2,3])
+    print(t)
+    act = nn.Tanh()
+    t = act(t)
+    print(act(t))
+    t = act(t)
+    print(act(t))
+
+    a = [0.3, 0.28, 0.12, 0.1, 0.1, 0.1]
+    T = 0.4 #临时给个值试试 
+    # 将概率分布进行sharpen处理，需要是np array，list不行
+    import numpy as np
+    p = np.asarray(a)
+    pt = p**(1/T)  # 0.5前后调整，若T=1，则相当于没有
+    targets = pt / sum(pt)
+    a = targets.tolist()
+    print(a)

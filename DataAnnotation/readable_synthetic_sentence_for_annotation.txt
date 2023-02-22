@@ -1,0 +1,3159 @@
+Label is: per:title, Generated Sentence 16201
+{
+    "Sentence": "The [E2] mayor [/E2] , [E1] Kollek [/E1] , who holds a degree in human development from Ohio University , announced on Thursday he was calling a special City Council meeting Wednesday to discuss his resignation . ",
+    "Head": "Kollek",
+    "Tail": "mayor",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "He is the [E2] professor [/E2] of linguistics and economics at [E1] Forsberg [/E1] University in Erlangen-Nuremberg , Germany . ",
+    "Head": "Forsberg",
+    "Tail": "professor",
+    "Label": "per:title",
+    "IsTrue": 0,
+    "Error": "entity: person as an organization"
+}
+{
+    "Sentence": "Pakistan Navy chief , , [E1] Mahmood Shah [/E1] , who was the [E2] chief of security [/E2] during the raid , said Pakistani Navy sailors and security personnel recovered over a dozen illegal drugs from the ship . ",
+    "Head": "Mahmood Shah",
+    "Tail": "chief of security",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E2] chairman [/E2] of Fyffes is [E1] Julian Bond [/E1] , who will step down from his seat on the board of Fyffes to be replaced by his partner Peter Munk , according to company documents . ",
+    "Head": "Julian Bond",
+    "Tail": "chairman",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The second season will begin with two-part premiere that will see 's [E1] Bryan Fuller [/E1] back in full control of The CW 's hit series , as [E2] executive producer [/E2] and showrunner Stephen Davis tells us exclusively . ",
+    "Head": "Bryan Fuller",
+    "Tail": "executive producer",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Director [/E2] [E1] Buse [/E1] ( The Usual Suspects , The Big Short , Spotlight ) is a filmmaker who grew up in Queens , where she attended Stuyvesant High School and Queens College . ",
+    "Head": "Buse",
+    "Tail": "Director",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "U.S. President Bill Clinton greets [E1] his [/E1] son-in-law Robert F Kennedy Jr. , who is with U.S. Sen Robert Kennedy Jr. , the [E2] senator [/E2] 's daughter , during their visit here in 1989 . ",
+    "Head": "his",
+    "Tail": "senator",
+    "Label": "per:title",
+    "IsTrue": 0,
+    "Error": "reference error"
+}
+{
+    "Sentence": "`` [E1] Nyanza Hawkins [/E1] , who is an associate [E2] pharmacist [/E2] at McNeil , said she was impressed with the new program . ",
+    "Head": "Nyanza Hawkins",
+    "Tail": "pharmacist",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E2] director [/E2] of al Qaeda , [E1] Abu Zubaydah [/E1] , has been held in a CIA prison where he had been waterboarded on at least 6 occasions -- the second-highest count by a United States intelligence official , according to U.S. officials . ",
+    "Head": "Abu Zubaydah",
+    "Tail": "director",
+    "Label": "per:title",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Lee Jye [/E1] , a leader of the ruling Democratic Progressive Party ( DPP ) and the [E2] National Defense Minister [/E2] , on Thursday called for the entire country -- not only North Korea -- to be fully able to defend itself . ",
+    "Head": "Lee Jye",
+    "Tail": "National Defense Minister",
+    "Label": "per:title",
+    "IsTrue": 0,
+    "Error": "reference error"
+}
+Label is: per:employee_of, Generated Sentence 14200
+{
+    "Sentence": "Sudan 's presidential candidate , Omar al-Bashir , responded by offering to resign in order to keep [E1] his [/E1] government in power , but [E2] Sudan [/E2] 's supreme religious authority , Sheikh Ahmed Mohamed Guled , refused the offer on Friday . ",
+    "Head": "his",
+    "Tail": "Sudan",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Jennifer Dunn [/E1] , the chairwoman of the [E2] Republican [/E2] Party of Pennsylvania , said she believes in God , \" but I can never prove him , so I can't preach him to you .\" ",
+    "Head": "Jennifer Dunn",
+    "Tail": "Republican",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] John Kerry [/E1] , the Democratic presidential nominee in 2004 , has made [E2] Vietnam Veterans Against the War [/E2] a mainstay of his campaign with a series of antiwar speeches in recent weeks . ",
+    "Head": "John Kerry",
+    "Tail": "Vietnam Veterans Against the War",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "MSNBC 's [E1] Dan Abrams [/E1] and his guest , Steve Kornacki , will do a roundtable interview with Republican presidential candidate and former Ohio Gov. John Kasich in Ohio this weekend , [E2] MSNBC [/E2] announced . ",
+    "Head": "Dan Abrams",
+    "Tail": "MSNBC",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Al Hubbard [/E1] , White House chief of staff , left the [E2] White House [/E2] last year for private work , where he earned more than $ 180 ,000 a year . ",
+    "Head": "Al Hubbard",
+    "Tail": "White House",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` I think the network needs to get out of its comfort zone and go find new programming that the country thinks that's appropriate , '' said [E1] Steve McPherson [/E1] , who joined the [E2] ABC [/E2] in 1986 and is now the executive editor of the Sunday-morning program . ",
+    "Head": "Steve McPherson",
+    "Tail": "ABC",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Ospel [/E1] joined [E2] UBS [/E2] in 1987 , starting the bank as a director of private equity firm Fyffes and as a managing director at the Zurich-based investment bank after retiring from the Swiss space agency in 1999 . ",
+    "Head": "Ospel",
+    "Tail": "UBS",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Roraback [/E1] , founder and president of [E2] Yale University 's School of Medicine [/E2] , said today that medical research conducted at his hospital during the past six years has substantially improved the lives of patients with colorectal cancer . ",
+    "Head": "Roraback",
+    "Tail": "Yale University 's School of Medicine",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] NBC [/E2] 's Chris [E1] Wilkinson [/E1] made some serious news on Thursday when he told the Atlanta Journal Constitution the network may announce its 2012-13 schedule during Tuesday night 's Super Bowl . ",
+    "Head": "Wilkinson",
+    "Tail": "NBC",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "U.S. Ambassador [E1] Nicholas Burns [/E1] was quoted as saying that the [E2] U.S. [/E2] side was not seeking an agreement , but rather an extension to the two year-old ceasefire . ",
+    "Head": "Nicholas Burns",
+    "Tail": "U.S.",
+    "Label": "per:employee_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: org:top_members/employees, Generated Sentence 12483
+{
+    "Sentence": "`` New York Immigration Coalition is the only organization in the United States that successfully challenged these policies while also challenging discrimination between American citizens and immigrants in the immigration courts and appeals courts , '' said [E2] Chung-Wha Hong [/E2] , Executive Director of the [E1] New York Immigration Coalition [/E1] . ",
+    "Head": "New York Immigration Coalition",
+    "Tail": "Chung-Wha Hong",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "On Wednesday , at a press conference following the 18th [E1] Inter American Press Association [/E1] ( IAPA ) Congress , Fernandez said [E2] he [/E2] was `` saddened and disappointed '' the U.S. would cut off the press in South America as a matter of priority . ",
+    "Head": "Inter American Press Association",
+    "Tail": "he",
+    "Label": "org:top_members/employees",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E2] Joel Hunter [/E2] , pastor of [E1] Northland Church [/E1] , a Southern Baptist ministry for children of divorce and remarried parents in Charlotte , N.C., died March 17 at his home . ",
+    "Head": "Northland Church",
+    "Tail": "Joel Hunter",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Mainland Affairs Council [/E1] ( MAC ) Secretary-general [E2] Lai Shin-yuan [/E2] said Monday that more than 25 Chinese and Taiwanese activists -- including four from the Kuomintang ( KMT ) -- and some American citizens had been summoned \" for questioning \" . ",
+    "Head": "Mainland Affairs Council",
+    "Tail": "Lai Shin-yuan",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Miroslav Singer [/E2] , chief executive officer of [E1] CNB [/E1] , said the company would continue to pursue an exchange with Hong Kong's MTR Co , which will be the country 's busiest intercity railway , on a deal for the 2.3 billion US dollar deal . ",
+    "Head": "CNB",
+    "Tail": "Miroslav Singer",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "In 2008 , [E2] Najee Ali [/E2] , the chief executive of [E1] Project Islamic HOPE [/E1] , a non-governmental organization working on domestic violence and child abuse in Pakistan , founded the advocacy group . ",
+    "Head": "Project Islamic HOPE",
+    "Tail": "Najee Ali",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Samsung [/E1] president [E2] Sang Wan Lee [/E2] was speaking at the launch of its flagship Galaxy line and on its launch of the next-generation Galaxy Note . ",
+    "Head": "Samsung",
+    "Tail": "Sang Wan Lee",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` There will certainly be many winners , '' [E2] Susan Neely [/E2] , [E1] American Beverage Association [/E1] ( ABA ) president and CEO , said Thursday . ",
+    "Head": "American Beverage Association",
+    "Tail": "Susan Neely",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] ABA [/E1] President [E2] Karen J. Mathis [/E2] visited St. Louis after last year 's riots there and delivered a passionate call to end racially biased policing . ",
+    "Head": "ABA",
+    "Tail": "Karen J. Mathis",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Metro Atlanta Chamber of Commerce [/E1] Deputy Chief of Staff [E2] Sam Williams [/E2] said Monday that Metro and Georgia Pacific have agreed to build a North Central High-Speed Rail Corridor . ",
+    "Head": "Metro Atlanta Chamber of Commerce",
+    "Tail": "Sam Williams",
+    "Label": "org:top_members/employees",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: per:identity, Generated Sentence 28159
+{
+    "Sentence": "[E2] Katherine Heigl [/E2] will star as [E1] her [/E1] 's ' loyal secretary Diane on Lifetime 's ",
+    "Head": "her",
+    "Tail": "Katherine Heigl",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] He [/E1] and wife Senn , then a 23-year-old model , had separated shortly after he graduated from the University and married [E2] Senn [/E2] , an American-born actress . ",
+    "Head": "He",
+    "Tail": "Senn",
+    "Label": "per:identity",
+    "IsTrue": 0,
+    "Error": "not same person"
+}
+{
+    "Sentence": "When [E2] Fuller [/E2] was 14 and first enrolled in a West Texas high school that promoted its African American students to varsity , he was the only person of color , he says , and his teachers didn't know they could tell [E1] he [/E1] was black . ",
+    "Head": "he",
+    "Tail": "Fuller",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "But the first real challenge for [E2] his [/E2] son was the challenge to [E1] his [/E1] father , who died in 1991 . ",
+    "Head": "his",
+    "Tail": "his",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Before their marriage , Mandy , 46 , spoke to reporters for months about a variety of public issues , including divorce , her struggles with alcoholism and [E2] her [/E2] struggles to find the right career for [E1] her [/E1] son , Andrew . ",
+    "Head": "her",
+    "Tail": "her",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "In their own small corner of the world , Kim and his family are living a quiet and happy life , where [E2] he [/E2] is president and [E1] his [/E1] younger brother , Son Joo Jang , holds the post of vice premier . ",
+    "Head": "his",
+    "Tail": "he",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "But before she got to the White House , she did get to see [E1] her [/E1] child born to Richard Nixon 's sister , Eileen : two baby girls , whom [E2] she [/E2] named after the Washington Redskins team . ",
+    "Head": "her",
+    "Tail": "she",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Edward J. Markey [/E2] , a Massachusetts Democrat , is an author from Boston who says he is '' no longer an advocate for legalization '' because [E1] he [/E1] believes the Senate bill would be harmful to poor people and that the Obama administration should back it . ",
+    "Head": "he",
+    "Tail": "Edward J. Markey",
+    "Label": "per:identity",
+    "IsTrue": 3,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Ellen Pompeo [/E2] : [E1] Ellen Pompeo [/E1] , a longtime Republican activist who co-founded the group in 1977 with her husband , Edward , called the nomination \" historic and unprecedented \" , but she also acknowledged that it is challenging to navigate the Senate . ",
+    "Head": "Ellen Pompeo",
+    "Tail": "Ellen Pompeo",
+    "Label": "per:identity",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Ms. [E1] Maloney [/E1] was the junior member of a committee that drafted the bill , in which she co-chaired a group that included Democratic Rep. [E2] Carolyn Maloney [/E2] of New York . ",
+    "Head": "Maloney",
+    "Tail": "Carolyn Maloney",
+    "Label": "per:identity",
+    "IsTrue": 0,
+    "Error": ""
+}
+Label is: org:country_of_branch, Generated Sentence 5113
+{
+    "Sentence": "The new legislation would allow for the sale of [E1] FMCSA [/E1] 's long-lasted crop insurance programs , which cover 1 million acres of [E2] U.S. [/E2] farmland , to private groups . ",
+    "Head": "FMCSA",
+    "Tail": "U.S.",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] DCR [/E1] has also established a partnership with the Ministry of Health of [E2] Angola [/E2] ( MINAH ) . ",
+    "Head": "DCR",
+    "Tail": "Angola",
+    "Label": "org:country_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "The [E1] KGB [/E1] 's main base in the [E2] USSR [/E2] was at an unspecified Moscow airport , said a spokesman for the Foreign Ministry . ",
+    "Head": "KGB",
+    "Tail": "USSR",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The National Congress of Resistance of Afghanistan ( ANP ) and Supreme Council for Support of Islam in Afghanistan ( SCRI ) are involved in the talks , while [E1] ANP HILL [/E1] and the Supreme Council for Support of Islam in [E2] Afghanistan [/E2] ( SCRI ) head the meeting . ",
+    "Head": "ANP HILL",
+    "Tail": "Afghanistan",
+    "Label": "org:country_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "Former [E1] NSC [/E1] president Lai-Tien Yen is stepping down after taking charge of a newly merged [E2] Taiwan [/E2] Business Federation , a non-profit industry organization of Taiwanese . ",
+    "Head": "NSC",
+    "Tail": "Taiwan",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] Korean Central News Agency [/E1] ( KCNA ) reported Sunday that Pyongyang 's state-run news agency , KCNA , has reported Wednesday on preparations for [E2] North Korea [/E2] 's first nuclear test . ",
+    "Head": "Korean Central News Agency",
+    "Tail": "North Korea",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "China and Pakistan last week agreed to allow the [E1] FAW [/E1] to carry out scientific-technical exchanges in [E2] China [/E2] while the Pakistan Army and the PLA are finalizing operational plans for an anti-personnel mine warfare ( APW ) program . ",
+    "Head": "FAW",
+    "Tail": "China",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "He'll be making his debut in [E2] Japan [/E2] , the [E1] Golden Baseball League [/E1] , Friday with the GBL Hawks against the Orix Buffaloes . ",
+    "Head": "Golden Baseball League",
+    "Tail": "Japan",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] RIA Novosti [/E1] is not the only state-owned Russian media outlet in the West that has a major stake in the sale : [E2] Russia [/E2] One ( RIA ) , Russia's largest state-owned media group , is also part of the consortium . ",
+    "Head": "RIA Novosti",
+    "Tail": "Russia",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The first company of its type to be found in Russia was London-based [E1] FirstGroup [/E1] , incorporated in 2000 to take over the assets of US car and travel firm International Auto Parts ( IAP ), which first sold its holdings in [E2] Britain [/E2] in 2006 . ",
+    "Head": "FirstGroup",
+    "Tail": "Britain",
+    "Label": "org:country_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: per:cause_of_death, Generated Sentence 674
+{
+    "Sentence": "Prime Minister [E1] Pascal Yoadimnadji [/E1] died of a [E2] heart attack [/E2] at his home Wednesday morning , an official said . ",
+    "Head": "Pascal Yoadimnadji",
+    "Tail": "heart attack",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Vernon Bellecourt [/E1] , the former Baltimore Sun reporter who died Thursday of [E2] pneumonia [/E2] at age 60 , was a journalist and one of the city 's legendary voices in the Civil Rights movement . ",
+    "Head": "Vernon Bellecourt",
+    "Tail": "pneumonia",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Gilbert Gude , a founder of the liberal think tank, died Thursday at his home in Bethesda , Md. The cause of death was [E2] congestive heart failure [/E2] , said [E1] Gilbert Gude [/E1] , a founding member of the Century Foundation and a former chief of staff to Lyndon B. Johnson . ",
+    "Head": "Gilbert Gude",
+    "Tail": "congestive heart failure",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Kurt Waldheim [/E1] , 62 , a former American ambassador to Germany , died in the Frankfurt Medical Center of [E2] a heart attack [/E2] Monday morning , the hospital said . ",
+    "Head": "Kurt Waldheim",
+    "Tail": "a heart attack",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Millender-McDonald [/E1] , 68 , a daughter of The New York Times , died by [E2] cancer [/E2] at her home in Millersville Saturday , her daughter , Laura Pillsbury , told a news conference at the Westchester home of her mother , the newspaper said . ",
+    "Head": "Millender-McDonald",
+    "Tail": "cancer",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "She had [E2] lung cancer [/E2] , but did not give her death notice publicly until a week later , when she wrote a $ 6,000 check to a charity that helps students to pay off debt , and also posted the death note publicly on [E1] her [/E1] Web site . ",
+    "Head": "her",
+    "Tail": "lung cancer",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Mr . his cancer had spread inside his brain and his skull , the judge said , rejecting his last-ditch appeal , saying [E1] he [/E1] had given no evidence that his [E2] cancer [/E2] was terminal . ",
+    "Head": "he",
+    "Tail": "cancer",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Kurt Waldheim [/E1] , the co-founder of AOL , died Wednesday at an Albany medical center where he was undergoing treatment for a [E2] heart attack [/E2] . ",
+    "Head": "Kurt Waldheim",
+    "Tail": "heart attack",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "After a 12- month bout with [E2] kidney failure [/E2] , [E1] Oscar Peterson [/E1] went home to Denver , Colo. on Monday night . ",
+    "Head": "Oscar Peterson",
+    "Tail": "kidney failure",
+    "Label": "per:cause_of_death",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Pascal Yoadimnadji [/E1] , the prime minister of Democratic Republic of Congo from 2000 to 2003 , died Sunday of a [E2] hemorrhage [/E2] in the capital , The Associated Press reported . ",
+    "Head": "Pascal Yoadimnadji",
+    "Tail": "hemorrhage",
+    "Label": "per:cause_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: org:city_of_branch, Generated Sentence 3832
+{
+    "Sentence": "[E1] Covidien PLC [/E1] 's [E2] Mansfield [/E2] store will remain open as usual , despite news that an investment bank is suing the company -- with no public announcement yet -- in a U.S. class action . ",
+    "Head": "Covidien PLC",
+    "Tail": "Mansfield",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] National Beef Packing Co. [/E1] , a [E2] Kansas City [/E2] firm , is set for an initial public offering on Tuesday . ",
+    "Head": "National Beef Packing Co.",
+    "Tail": "Kansas City",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Highland Capital Partners [/E1] , a hedge fund based in [E2] Lexington [/E2] , Ky., on Wednesday sold its 25 percent stake in American Financial Group , giving its investors more flexibility . ",
+    "Head": "Highland Capital Partners",
+    "Tail": "Lexington",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The merger is being billed as a win for [E1] Covidien PLC [/E1] with its new US subsidiary , but critics say the $ 16-billion merger will raise prices of all the drugs in its portfolio for the thousands of patients treated at [E2] Mansfield [/E2] Hospital since 1980 . ",
+    "Head": "Covidien PLC",
+    "Tail": "Mansfield",
+    "Label": "org:city_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "`` The fact that the average age of a female [E1] ABA [/E1] member is 49 is unacceptable to us , '' Ms. Pia told the [E2] Miami [/E2] Herald . ",
+    "Head": "ABA",
+    "Tail": "Miami",
+    "Label": "org:city_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Focus on the Family [/E1] , a major Christian anti-abortion organization , has held several Colorado Springs anti-abortion seminars on the issue , with proceeds going to the [E2] Colorado Springs [/E2] Abortion Clinic Foundation . ",
+    "Head": "Focus on the Family",
+    "Tail": "Colorado Springs",
+    "Label": "org:city_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "The new president of [E1] Independent Steelworkers Union [/E1] ( ISU ) in [E2] Weirton [/E2] , New Hampshire , Chris Anderson said . ",
+    "Head": "Independent Steelworkers Union",
+    "Tail": "Weirton",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Hong Kong Disneyland The [E1] Disneyland [/E1] Resort [E2] Hong Kong [/E2] is a resort offering activities for the whole family . ",
+    "Head": "Disneyland",
+    "Tail": "Hong Kong",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "New York-based [E1] MF Global [/E1] Inc. has agreed to pay $ 10 billion to investors linked to subprime mortgages and to settle U.S. government probes into how it sold some of those investments , the [E2] New York [/E2] City-based firm said Thursday . ",
+    "Head": "MF Global",
+    "Tail": "New York",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Red Sox [/E1] , [E2] Fort Myers ",
+    "Head": "Red Sox",
+    "Tail": "Fort Myers",
+    "Label": "org:city_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: org:alternate_names, Generated Sentence 6571
+{
+    "Sentence": "Pakistani [E2] Army [/E2] officers have been ordered to report to [E1] Lashkar-i-Toiba [/E1] 's headquarters in Karachi , the Indian Express website reported . ",
+    "Head": "Lashkar-i-Toiba",
+    "Tail": "Army",
+    "Label": "org:alternate_names",
+    "IsTrue": 0,
+    "Error": "error triplet"
+}
+{
+    "Sentence": "The [E2] APA [/E2] has a long and proud history of advocacy by members of the American Psychological Association ( [E1] APA [/E1] ) . ",
+    "Head": "APA",
+    "Tail": "APA",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` It was the [E2] American Paedophile Association [/E2] , '' he told the [E1] APA [/E1] conference this week in Atlanta . ",
+    "Head": "APA",
+    "Tail": "American Paedophile Association",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The Central Committee of the [E2] Communist Party of China [/E2] ( [E1] CPC [/E1] ) on Friday approved plans for an all-powerful body of delegates to draw up the new Constitution ( National People 's Congress ) , the official Xinhua news agency reported . ",
+    "Head": "CPC",
+    "Tail": "Communist Party of China",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The U.S. [E1] Federal Aviation Administration [/E1] ( [E2] FAA [/E2] ) said there was no evidence of intentional wrongdoing on the part of any airline operating on the United States mainland , despite the airlines ' announcement to halt their routes . ",
+    "Head": "Federal Aviation Administration",
+    "Tail": "FAA",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "He began his political career at the conservative [E1] American Psychological Association [/E1] , a group that views its members as experts in public-health issues , and he has made the [E2] APA [/E2] one of his signature causes over the years . ",
+    "Head": "American Psychological Association",
+    "Tail": "APA",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "On Sept 23rd the [E2] First Automobile Works [/E2] ( [E1] FAW [/E1] ) began work on the 1,000-horsepower ( 810 kW ) 1,600-liter ( 5,800 kg ) 3.0-million-rpm ( 4 ,000 rpm ) engine of the Renault Megane , the largest ever made in France ( 3/8 ) . ",
+    "Head": "FAW",
+    "Tail": "First Automobile Works",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "NEC 's [E2] National Executive Council [/E2] ( [E1] NEC [/E1] ) is calling for reform of the presidential decree that set the stage for the impeachment . ",
+    "Head": "NEC",
+    "Tail": "National Executive Council",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] AAA [/E2] Chairman David Crutchfield , former Senate minority leader ; [E1] American Automobile Association [/E1] Chairman David Crutchfield , left , as the first group in the Washington delegation to depart to Saudi Arabia on April 9 to attend King Salman 's official mourning . ",
+    "Head": "American Automobile Association",
+    "Tail": "AAA",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Noordhoff Craniofacial Foundation [/E1] ( [E2] NCF [/E2] ) is a private, tax exempt organization founded in 1948 to support healthy craniofacial function in children and adults . ",
+    "Head": "Noordhoff Craniofacial Foundation",
+    "Tail": "NCF",
+    "Label": "org:alternate_names",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: per:date_of_death, Generated Sentence 1266
+{
+    "Sentence": "[E1] Paul Gillmor [/E1] , chief operating officer of Hormel and president of Hormel Food Inc. , died [E2] September [/E2] 8 at Vanderbilt University Medical Center , where his father , Philip Gillmor , was doing research . ",
+    "Head": "Paul Gillmor",
+    "Tail": "September",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "After a long illness , she died at [E1] her [/E1] home on [E2] March 24 [/E2] . ",
+    "Head": "her",
+    "Tail": "March 24",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Juanita Millender-McDonald [/E1] died [E2] Sunday [/E2] at Children 's Hospital Los Angeles , the Los Angeles Times reports . ",
+    "Head": "Juanita Millender-McDonald",
+    "Tail": "Sunday",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The director of the National Museum of African American History and Culture said Michael was [E2] one [/E2] of his staff members and he never left a note as [E1] Michael [/E1] was diagnosed with terminal pancreatic cancer in March . ",
+    "Head": "Michael",
+    "Tail": "one",
+    "Label": "per:date_of_death",
+    "IsTrue": 0,
+    "Error": "error triplet"
+}
+{
+    "Sentence": "[E1] Michael Sandy [/E1] , a longtime leader of the California Democratic Party turned candidate for state legislature , died [E2] Friday [/E2] in Los Angeles . ",
+    "Head": "Michael Sandy",
+    "Tail": "Friday",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Juanita Millender-McDonald [/E1] , 72 , died [E2] Sunday [/E2] at Wake Forest Baptist Medical Center . ",
+    "Head": "Juanita Millender-McDonald",
+    "Tail": "Sunday",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Juanita Millender-McDonald [/E1] , an African American mother , daughter and activist , died [E2] Sunday [/E2] . ",
+    "Head": "Juanita Millender-McDonald",
+    "Tail": "Sunday",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "She died of a stroke at the age of 63 in Los Angeles in March [E2] 1963 [/E2] , but [E1] her [/E1] story is a tale of the triumphs and the ups ; a time when, as she once put it , '' I had power over the world . '' ",
+    "Head": "her",
+    "Tail": "1963",
+    "Label": "per:date_of_death",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Sills [/E1] , the film 's author and its executive producer , said [E2] Monday [/E2] that she has signed deals with five television networks and 20 film studios as she moves forward with the film . ",
+    "Head": "Sills",
+    "Tail": "Monday",
+    "Label": "per:date_of_death",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "Her final illness surfaced Thursday with news that she had failed in a failed attempt to have a gastric bypass procedure on [E2] Aug. 10 [/E2] , [E1] her [/E1] publicist Elizabeth Davis said , and that she was \" recovering and thriving in the hospital \" . ",
+    "Head": "her",
+    "Tail": "Aug. 10",
+    "Label": "per:date_of_death",
+    "IsTrue": 0,
+    "Error": ""
+}
+Label is: per:other_family, Generated Sentence 707
+{
+    "Sentence": "\" What a lot of people don't know is that I have a half-sister called Holly who is a makeup artist . '' [E1] Spencer Pratt [/E1] 's half-sister , [E2] Holly [/E2] , a makeup artist who attended the premiere , told MTV in a statement . ",
+    "Head": "Spencer Pratt",
+    "Tail": "Holly",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "is sibling"
+}
+{
+    "Sentence": "[E1] Beyonc\u00e9 [/E1] will be the guest of honor at a concert by British dance super-star [E2] Agn\u00e8z dereon [/E2] in London on July 18 , her record label said Wednesday . ",
+    "Head": "Beyonc\u00e9",
+    "Tail": "Agn\u00e8z dereon",
+    "Label": "per:other_family",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Paavo Nurmi [/E1] , a senior vice speaker in the Prime Minister 's Office , told The Daily News that [E2] she [/E2] will be a party official of the Progressive Party , a rival to the National Progressive Alliance ( PPA ) in the upcoming general elections . ",
+    "Head": "Paavo Nurmi",
+    "Tail": "she",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Jake Pavelka [/E1] will captain the team in the game despite his sister [E2] Jessie Pavelka [/E2] being sidelined with an undisclosed injury . ",
+    "Head": "Jake Pavelka",
+    "Tail": "Jessie Pavelka",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": is sibling"
+}
+{
+    "Sentence": "[E1] Her [/E1] father , [E2] Andrew Roraback [/E2] , is a top Democratic Party fundraiser . ",
+    "Head": "Her",
+    "Tail": "Andrew Roraback",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "is parent"
+}
+{
+    "Sentence": "[E2] Saddam Hussein [/E2] killed [E1] Hussein Kamel [/E1] 's son , Muqtada , and other top officials , according to news reports this weekend . ",
+    "Head": "Hussein Kamel",
+    "Tail": "Saddam Hussein",
+    "Label": "per:other_family",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The three sisters were married only once , to an Arkansas native named [E2] Parren Mitchell [/E2] ; he died in 1970 , and her second daughter , [E1] Juanita Jackson Mitchell [/E1] , was adopted by the Rev. Charles McNair . ",
+    "Head": "Juanita Jackson Mitchell",
+    "Tail": "Parren Mitchell",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "is parent"
+}
+{
+    "Sentence": "The former Boy Meets World star talks about his parents , [E1] Spencer Pratt [/E1] and [E2] Holly [/E2] Perry , from \" A-List , '' and admits the couple are 's together but are 's separated ' when it comes to the kids . ",
+    "Head": "Spencer Pratt",
+    "Tail": "Holly",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "is spouse"
+}
+{
+    "Sentence": "In 1974 , he married three times , once with a former senator , three times by the day with a former congresswoman , and then with [E1] his [/E1] current wife , [E2] Clarence Mitchell III [/E2] , also of Georgia . ",
+    "Head": "his",
+    "Tail": "Clarence Mitchell III",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "is spouse"
+}
+{
+    "Sentence": "[E1] He [/E1] first met his wife of 41 years , the former Georgia Secretary of State [E2] Clarence Mitchell III [/E2] , in his office when the couple were both working for Governor Richard Lugar , who was Republican , and they were both in Washington , D.C. . ",
+    "Head": "He",
+    "Tail": "Clarence Mitchell III",
+    "Label": "per:other_family",
+    "IsTrue": 0,
+    "Error": "is spouse"
+}
+Label is: per:schools_attended, Generated Sentence 1315
+{
+    "Sentence": "[E1] Dent [/E1] , a [E2] George Washington University [/E2] graduate , is an author and editor of several books about the Founding Fathers and a member of the founding fathers' committee on constitutional amendments . ",
+    "Head": "Dent",
+    "Tail": "George Washington University",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "In 2008 , [E1] Yolanda King [/E1] , then a professor of history at [E2] New York University [/E2] , was appointed the country 's first black minister of education . ",
+    "Head": "Yolanda King",
+    "Tail": "New York University",
+    "Label": "per:schools_attended",
+    "IsTrue": 0,
+    "Error": "is employee_of"
+}
+{
+    "Sentence": "She graduated with honors from [E2] Trinity College [/E2] in 1964 , when [E1] she [/E1] was a junior in high school . ",
+    "Head": "she",
+    "Tail": "Trinity College",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] She [/E1] graduated from [E2] Mount Holyoke College [/E2] in 1960 , and an associate from Harvard Law School in 1961 . ",
+    "Head": "She",
+    "Tail": "Mount Holyoke College",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] He [/E1] graduated from [E2] Simon Bolivar University [/E2] in 1959 . ",
+    "Head": "He",
+    "Tail": "Simon Bolivar University",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "In 1986 , [E1] he [/E1] earned a bachelor 's degree in history and public policy at California , a masters degree in public administration from Pennsylvania , and a doctorate in public affairs at the [E2] University of Southern California [/E2] . ",
+    "Head": "he",
+    "Tail": "University of Southern California",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Waldheim [/E1] attended [E2] Vienna University [/E2] ( 1870 ) and the Federal University of Potsdam ( 1877 ) before entering St. Louis University , where he was a history major , in 1894 . ",
+    "Head": "Waldheim",
+    "Tail": "Vienna University",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "But the same day , his friend Harvard psychologist and sociologist Frederick S. Nock was at [E2] Yale [/E2] -- and he had a rather different reaction to the young man [E1] he [/E1] said made him feel so happy : `` He was too good-looking , '' Nock said . ",
+    "Head": "he",
+    "Tail": "Yale",
+    "Label": "per:schools_attended",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Buchwald [/E1] , 15 , was born in Jamaica City , Jamaica , and attended the [E2] Jamaica High School and Forest Hills High School [/E2] . ",
+    "Head": "Buchwald",
+    "Tail": "Jamaica High School and Forest Hills High School",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] He [/E1] graduated from [E2] Johns Hopkins School [/E2] of Advanced International Studies in 1958 with a B.A. degree in English . ",
+    "Head": "He",
+    "Tail": "Johns Hopkins School",
+    "Label": "per:schools_attended",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: org:stateorprovince_of_branch, Generated Sentence 1776
+{
+    "Sentence": "[E1] Marywood University [/E1] , located in [E2] Pennsylvania [/E2] , has been working with the Navy Seal and Naval Anti-Terrorist Center to evaluate the capabilities of the M8-25 submachine gun . ",
+    "Head": "Marywood University",
+    "Tail": "Pennsylvania",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Marywood University [/E1] , a state-certified master's program in health and wellness , is located in South Philadelphia , [E2] Pa. [/E2] , 10 miles from Mount Airy and a half-hour drive by car from North Park . ",
+    "Head": "Marywood University",
+    "Tail": "Pa.",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Last year , the [E1] National Christmas Tree Association [/E1] sent a bill making [E2] Missouri [/E2] the 25th and last state -- after Nebraska , Indiana , Wisconsin and Tennessee -- to enact the $ 10 million program . ",
+    "Head": "National Christmas Tree Association",
+    "Tail": "Missouri",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "This week , the [E1] Institute for Diversity and Ethics in Sport [/E1] , based in Gainesville , Fla. , will hold a conference at the University of Central [E2] Florida [/E2] that aims to highlight the work of athletes , managers and employees who have worked on the issue . ",
+    "Head": "Institute for Diversity and Ethics in Sport",
+    "Tail": "Florida",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The Fidelity University of [E2] Utah [/E2] has confirmed the sale to US insurance giant Fidelity since the November 2011 sale of Fidelity's Utah-based [E1] Fidelity [/E1] University of the Americas , according to documents . ",
+    "Head": "Fidelity",
+    "Tail": "Utah",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Philadelphia Inquirer [/E1] President Donald Kallinak was among the more than 600 people who gathered in [E2] Pa. [/E2] on Monday to give their support to the new team . ",
+    "Head": "Philadelphia Inquirer",
+    "Tail": "Pa.",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "An auctioneer from Irvine , [E2] Calif. [/E2] , [E1] Ownit Mortgage Solutions [/E1] ( NMS ) said it sold 11,959 shares for US $ 17,902 , or 12.8 percent less than original estimate . ",
+    "Head": "Ownit Mortgage Solutions",
+    "Tail": "Calif.",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] CNAC [/E1] , the national umbrella body of the Chinese National Hotels Association , said the hotel operator plans to invest $ 600 million in its [E2] Hong Kong-based [/E2] Hong Kong-headquartered subsidiary , adding that the investment is expected to be offset by its merger with Asian Development Bank . ",
+    "Head": "CNAC",
+    "Tail": "Hong Kong-based",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "In the year 2000 , [E1] Fidelity [/E1] opened its first U.S. affiliate based in [E2] Massachusetts [/E2] . ",
+    "Head": "Fidelity",
+    "Tail": "Massachusetts",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E2] New York [/E2] federal investigation stemmed from a U.S. Senate investigation into UBS ' U.S. business before the sale of [E1] MF Global [/E1] Inc ( MF G ), then about $ 5 billion in assets . ",
+    "Head": "MF Global",
+    "Tail": "New York",
+    "Label": "org:stateorprovince_of_branch",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+Label is: per:cities_of_residence, Generated Sentence 1468
+{
+    "Sentence": "[E1] Jake Pavelka [/E1] , a member of the Canadian national squad and a member of Canada 's senior team who is with [E2] Dallas [/E2] now , was with the team in his home city , Toronto , when he began his medical studies in 1989 . ",
+    "Head": "Jake Pavelka",
+    "Tail": "Dallas",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "He played in [E2] Phoenix [/E2] and Baltimore in his first two professional seasons , and played a year in Los Angeles for the Dodgers , where [E1] he [/E1] won a World Series in 1952 . ",
+    "Head": "he",
+    "Tail": "Phoenix",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "`` Her life has been about doing what she loved , and [E1] she [/E1] was able to do that in the service of her community , '' said Martin Cusick , a [E2] Detroit [/E2] native who has known and worked in Michigan politics for decades . ",
+    "Head": "she",
+    "Tail": "Detroit",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "error reference"
+}
+{
+    "Sentence": "[E1] Deaver [/E1] , who first gained fame in the 1960s for his role on the popular television show `` The New York Yankees \ufffd '' , died December 11 at his home in [E2] Mojave [/E2] , Calif. . ",
+    "Head": "Deaver",
+    "Tail": "Mojave",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` It is hard because most of my friends , friends of Ahearn and of the members of the [E1] Ahearn [/E1] family have moved away from Washington , D.C. '' , `` the Washington Post 's The [E2] Washington [/E2] Times ' ' editorial board wrote ; ",
+    "Head": "Ahearn",
+    "Tail": "Washington",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 3,
+    "Error": ""
+}
+{
+    "Sentence": "Blackburn and her sister , Annabelle , met a number of times on the set of the television mini , and [E2] Blackburn [/E2] was asked to be the guest star in the movie , but [E1] she [/E1] declined , The Birmingham Mail reported . ",
+    "Head": "she",
+    "Tail": "Blackburn",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] He [/E1] moved to [E2] Denver [/E2] in 1977 with his wife of 30 years , Jane . ",
+    "Head": "He",
+    "Tail": "Denver",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "So that we know that he was actually born in [E2] Canaan [/E2] , [E1] his [/E1] family moved to Egypt at a young age , where he began a career as a translator . ",
+    "Head": "his",
+    "Tail": "Canaan",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "born"
+}
+{
+    "Sentence": "[E1] Chris Simcox [/E1] , who made some serious waves in the last election , is expected to announce another plan Thursday , when he holds a town hall meeting at Phoenix-based [E2] Phoenix-based [/E2] Moms , The Heart . ",
+    "Head": "Chris Simcox",
+    "Tail": "Phoenix-based",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "Born in [E2] Vienna [/E2] on February 8 , 1916 , to a Slovak father and Russian mother , [E1] Kollek [/E1] was a precocious student . ",
+    "Head": "Kollek",
+    "Tail": "Vienna",
+    "Label": "per:cities_of_residence",
+    "IsTrue": 0,
+    "Error": "born"
+}
+Label is: per:children, Generated Sentence 2148
+{
+    "Sentence": "But the actress who recently celebrated her 28 th birthday , actress [E2] Adrienne Gude [/E2] , recalled [E1] her [/E1] childhood as an adolescent in a 2007 memoir . ",
+    "Head": "her",
+    "Tail": "Adrienne Gude",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "Although she was unable to attend her wedding , [E2] Nancy Bliss [/E2] , a longtime friend and advocate , was there to support [E1] her [/E1] . ",
+    "Head": "her",
+    "Tail": "Nancy Bliss",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "`` [E1] Kelly Cutrone [/E1] and [E2] Ava [/E2] are in the best of hands , '' Fournier says . ",
+    "Head": "Kelly Cutrone",
+    "Tail": "Ava",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Henebry [/E1] 's daughter , [E2] Walter [/E2] , is a retired model and actress whom her idol , Paris Hilton , was in touch with during her relationship with Jurgen . ",
+    "Head": "Henebry",
+    "Tail": "Walter",
+    "Label": "per:children",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Buchwald 's son [E2] Joel [/E2] , who was a junior in high school , said he was disappointed that [E1] Buchwald [/E1] did not attend . ",
+    "Head": "Buchwald",
+    "Tail": "Joel",
+    "Label": "per:children",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "For the first time in his career , [E1] Al [/E1] , 48 , and his younger brother , [E2] Jared [/E2] , 27 , have made the leap to full-time members of their families ' evangelical church . ",
+    "Head": "Al",
+    "Tail": "Jared",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "sibling"
+}
+{
+    "Sentence": "[E2] Jonathan Goodman [/E2] , who directed many recent film scripts to be adapted into plays for stage , television and the big screen , died Nov. 4 in a Los Angeles hospital of complications of a brain aneurysm , his agent , Mark Borkowski of [E1] Goodman [/E1] Entertainment , confirmed . ",
+    "Head": "Goodman",
+    "Tail": "Jonathan Goodman",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Emily Ann Kennard Derounian [/E1] , who was born in Pennsylvania and raised in New Hampshire , married [E2] Eleanor Derounian [/E2] on Feb. 26 , 1917 , in Fairfield , Conn. . ",
+    "Head": "Emily Ann Kennard Derounian",
+    "Tail": "Eleanor Derounian",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "spouse"
+}
+{
+    "Sentence": "[E2] Richmond III [/E2] , the second son of [E1] Richmond Jr. [/E1] and Elizabeth Lee , a writer whom he idolized as a child , married Virginia Supreme Court Justice Catherine Deaver in 1959 . ",
+    "Head": "Richmond Jr.",
+    "Tail": "Richmond III",
+    "Label": "per:children",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] His [/E1] mother , Lottie [E2] Richmond Jr. [/E2] , a former congresswoman known for her work in the civil rights movement , died Dec. 28 at Methodist Hospital of a cerebral hemorrhage , said her son , The Richmond Times-Dispatch . ",
+    "Head": "His",
+    "Tail": "Richmond Jr.",
+    "Label": "per:children",
+    "IsTrue": 0,
+    "Error": "reverse"
+}
+Label is: per:religion, Generated Sentence 437
+{
+    "Sentence": "So that we know that [E1] he [/E1] was actually born in India but was brought up in Egypt , his father was a [E2] Muslim [/E2] . ",
+    "Head": "he",
+    "Tail": "Muslim",
+    "Label": "per:religion",
+    "IsTrue": 0,
+    "Error": "error reference"
+}
+{
+    "Sentence": "Despite his own mixed [E2] Christian [/E2] and Muslim faith , he said that America 's founding fathers , like [E1] his [/E1] father , believed in the divine right of kings , and that \" the very idea 's being in question is the right one . '' ",
+    "Head": "his",
+    "Tail": "Christian",
+    "Label": "per:religion",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` A Christian in a [E2] Muslim [/E2] country is an evil person , ' '' [E1] he [/E1] said . ",
+    "Head": "he",
+    "Tail": "Muslim",
+    "Label": "per:religion",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Carson [/E1] , 71 , also said that the U.S. may be headed toward another World War in the next few years if [E2] Islam [/E2] loses its moral authority in the U.S. . ",
+    "Head": "Carson",
+    "Tail": "Islam",
+    "Label": "per:religion",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Boyle [/E1] , a member of the Scottish Socialist Party , said Wednesday that the debate between the Catholic Archbishops of Scotland and the [E2] Catholic [/E2] Church on the \" sacramental dimension of marriage was a key moment in the historic debate over the church 's role in society . '' ",
+    "Head": "Boyle",
+    "Tail": "Catholic",
+    "Label": "per:religion",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "What about [E1] John Dewey [/E1] ? We have never heard many details about his [E2] atheism [/E2] . ",
+    "Head": "John Dewey",
+    "Tail": "atheism",
+    "Label": "per:religion",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "His publicist says [E1] Boyle [/E1] , who was ordained a [E2] Catholic [/E2] in 1963 , is deeply religious and that his religion is `` completely incompatible with his public life . '' ",
+    "Head": "Boyle",
+    "Tail": "Catholic",
+    "Label": "per:religion",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "From his home in Gaza City , Lebanon-born [E1] Levant [/E1] and his wife Aida Rokn have been a central figure in the Palestinian militant movement of the late 1970s , when the group first emerged from the Egyptian-backed [E2] Muslim [/E2] Brothers . ",
+    "Head": "Levant",
+    "Tail": "Muslim",
+    "Label": "per:religion",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Andre Carson [/E1] is the executive director of [E2] Muslim [/E2] Reform Association , an influential national organization that represents American Muslims . ",
+    "Head": "Andre Carson",
+    "Tail": "Muslim",
+    "Label": "per:religion",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` The Bush Administration 's decision for war against Iraq in 2003 was based on an agenda that was completely at odds with the interests of the [E2] Jewish [/E2] people and the world majority , '' [E1] Perle [/E1] said . ",
+    "Head": "Perle",
+    "Tail": "Jewish",
+    "Label": "per:religion",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+Label is: org:member_of, Generated Sentence 2114
+{
+    "Sentence": "[E2] Carnival Corporation & plc [/E2] , a subsidiary of [E1] Carnival Cruise Lines [/E1] , are the first to admit losing out on more than $ 10 billion in profits on investments in cruise , theme park and other travel operations . ",
+    "Head": "Carnival Cruise Lines",
+    "Tail": "Carnival Corporation & plc",
+    "Label": "org:member_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The law 's chief sponsor is [E2] UIA [/E2] President Brian E. King , who has been an advocate of the [E1] American Bar Association [/E1] 's \" No True Scotsman Statement \" on domestic violence . ",
+    "Head": "American Bar Association",
+    "Tail": "UIA",
+    "Label": "org:member_of",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Arsenal [/E1] , the leading Premiership team , last season finished top in the [E2] Premier League [/E2] with a 59-point margin . ",
+    "Head": "Arsenal",
+    "Tail": "Premier League",
+    "Label": "org:member_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The Rev. David C. Smith of [E1] North Phoenix Baptist Church [/E1] , which merged with [E2] Southern Baptist Convention [/E2] ( SBC ) members in 2008 , said in his sermon , `` We love the poor `` , but the SBC had not given the money to the North Phoenix group . ",
+    "Head": "North Phoenix Baptist Church",
+    "Tail": "Southern Baptist Convention",
+    "Label": "org:member_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E2] NFL [/E2] South has the NFC South in the crosshairs as the Saints play the Panthers in Carolina after Sunday night's game and the Buccaneers and Saints play in Tampa , Fla., each of which are [E1] NFC South [/E1] games . ",
+    "Head": "NFC South",
+    "Tail": "NFL",
+    "Label": "org:member_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] Scorpions [/E1] ' spokesman , Dhean Boushehreh , said that the government in Iran was planning to announce the end of the prosecution of eight officials -- including its [E2] national prosecuting authority [/E2] , the Supreme National Security Council ( SNSC ) -- for crimes relating to the 1953 coup . ",
+    "Head": "Scorpions",
+    "Tail": "national prosecuting authority",
+    "Label": "org:member_of",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E2] NBC Universal [/E2] 's [E1] USA Network [/E1] ( USAN ) , which includes NBC Sports Network the network 's most valuable programming assets , took a beating when it failed to gain the rights to the next Major League Baseball ( MLB ) All-Star Game in New York City . ",
+    "Head": "USA Network",
+    "Tail": "NBC Universal",
+    "Label": "org:member_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "For the first time in a full season in franchise history , the [E1] NFC South [/E1] and [E2] NFC [/E2] East teams are set to clash in the first round of the playoffs . ",
+    "Head": "NFC South",
+    "Tail": "NFC",
+    "Label": "org:member_of",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The new U.S. investment of $ 3.1million in [E1] Taiwan Research Institute [/E1] ( [E2] BUU [/E2] ) will be used to train a senior research manager ( SM 's senior research manager ) at the Institute on human biology . ",
+    "Head": "Taiwan Research Institute",
+    "Tail": "BUU",
+    "Label": "org:member_of",
+    "IsTrue": 0,
+    "Error": "error alternate_names "
+}
+{
+    "Sentence": "[E2] Carnival Corporation & plc [/E2] ( www.carnivalcorp.com ) , a subsidiary of [E1] Carnival Cruise Lines [/E1] Corp that oversees the Costa Maya Princess , Carnival Princess and Carnival Maya , is considering selling all its cruise lines , CITI reported . ",
+    "Head": "Carnival Cruise Lines",
+    "Tail": "Carnival Corporation & plc",
+    "Label": "org:member_of",
+    "IsTrue": 0,
+    "Error": "reverse"
+}
+Label is: per:age, Generated Sentence 2650
+{
+    "Sentence": "The [E1] shipbuilder [/E1] , [E2] 24-year-old [/E2] Shimon Adler , a member of the shipbuilding group ThyssenKrupp Marine Systems ' Japanese subsidiary , plans to move from its current base at its Kiel plant to a new factory in the northern city of Hannover , ThyssenKrupp said in a statement . ",
+    "Head": "shipbuilder",
+    "Tail": "24-year-old",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "He first became an adult after [E1] he [/E1] turned [E2] 17 [/E2] in 1962 and began attending Brigham Young University . ",
+    "Head": "he",
+    "Tail": "17",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] 58-year-old [/E1] [E2] banker [/E2] , who moved to New York six decades ago , said she could not afford anything while she was recovering from the surgery . ",
+    "Head": "58-year-old",
+    "Tail": "banker",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Daley was [E2] 8 [/E2] years old when [E1] he [/E1] lost his brother , David , at the Battle of Guadalcanal during World War II . ",
+    "Head": "he",
+    "Tail": "8",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Carolyn Maloney [/E1] , a [E2] 60-year-old [/E2] congresswoman from Long Island who sits on the House Financial Services Committee , said that the bill provides a good balance of needed reforms with the '' 'sophisticated' solution of expanding the FDIC 's capital so that banks could be stronger . ",
+    "Head": "Carolyn Maloney",
+    "Tail": "60-year-old",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Parren J. Mitchell [/E1] , [E2] 85 [/E2] , was a founder of PGA Tour and played a major role in the organization 's development . ",
+    "Head": "Parren J. Mitchell",
+    "Tail": "85",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Yoadimnadji [/E1] , [E2] 56 [/E2] , announced that his wife has died of cancer , the Nigerian news wire Enyei reported . ",
+    "Head": "Yoadimnadji",
+    "Tail": "56",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Beverly Sills [/E1] , [E2] 78 [/E2] , says she does not fear any action against her and thinks the most pressing issue to be resolved with regard to the film is the validity of the film 's star power . ",
+    "Head": "Beverly Sills",
+    "Tail": "78",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Brandon McInerney [/E1] , [E2] 14 [/E2] , made headlines about a year ago when he , his younger brother Mike , and a friend tried to sneak into Fort McMurray on a snowbound road during the height of the wildfire season . ",
+    "Head": "Brandon McInerney",
+    "Tail": "14",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Michael Sandy [/E1] , [E2] 29 [/E2] , the president of the New Jersey-based National Organization for the Reform of Marijuana Laws , is expected to give his keynote address at the conference . ",
+    "Head": "Michael Sandy",
+    "Tail": "29",
+    "Label": "per:age",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: per:spouse, Generated Sentence 1973
+{
+    "Sentence": "`` She was an absolutely brilliant, brilliant girl , '' [E2] Stanley Kirkaldy [/E2] , [E1] Irene Morgan [/E1] 's childhood friend , told the newspaper . ",
+    "Head": "Irene Morgan",
+    "Tail": "Stanley Kirkaldy",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "When he returned home and got in touch with his younger daughter , [E2] Vilma Espin [/E2] , [E1] he [/E1] was relieved to realize his daughter was okay but worried she might be depressed. `` She really needs to go home to her grandma , '' Mr. Jokin said . ",
+    "Head": "he",
+    "Tail": "Vilma Espin",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "children"
+}
+{
+    "Sentence": "[E1] Ellen DeGeneres [/E1] told the audience at World AIDS Day in Washington , DC on Monday that she had spent three years planning to launch her \" Ellen Degeneres and Portia de Rossi: You Made It! \" show on the network she created with [E2] Portia [/E2] de Rossi on ABC . ",
+    "Head": "Ellen DeGeneres",
+    "Tail": "Portia",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Robert McNair [/E1] , who served as governor in 1977 , 1979 , 1982 and 1987 and was succeeded by [E2] Josephine Robinson McNair [/E2] , died Saturday at a Los Angeles hospital of multiple organ failure . ",
+    "Head": "Robert McNair",
+    "Tail": "Josephine Robinson McNair",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E1] Bellecourt [/E1] , [E2] his [/E2] second wife of 58 years , died Nov. 23 at Vanderbilt Medical Center in Nashville . ",
+    "Head": "Bellecourt",
+    "Tail": "his",
+    "Label": "per:spouse",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Hank [/E2] : [E1] Kendra [/E1] is really the only one who really knows when everything's all right with her . ",
+    "Head": "Kendra",
+    "Tail": "Hank",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "`` He had this wonderful and unique gift about [E1] him [/E1] that he knew how to use language , '' said [E2] her [/E2] former aide , M. Michael Copps . ",
+    "Head": "him",
+    "Tail": "her",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "The two were first married in 1959 , when He was 28 and Rebecca was 27 , making the year the first when [E2] Rebecca [/E2] was a teenager and [E1] He [/E1] a grown man . ",
+    "Head": "He",
+    "Tail": "Rebecca",
+    "Label": "per:spouse",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Rothman was married to his friend , and producer , [E2] Al [/E2] [E1] Rothman [/E1] , for 37 years before her death . ",
+    "Head": "Rothman",
+    "Tail": "Al",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "entity lcoation"
+}
+{
+    "Sentence": "[E2] Robert Goodman [/E2] , the only surviving child of Benjamin Franklin Jr. and his wife , Maria de Montfort , was born in France in 1770 , in Paris , by his birth mother Maria de Montfort , and in the U.S. , by his step-father Benjamin M. [E1] Goodman [/E1] . ",
+    "Head": "Goodman",
+    "Tail": "Robert Goodman",
+    "Label": "per:spouse",
+    "IsTrue": 0,
+    "Error": "parent"
+}
+Label is: org:members, Generated Sentence 3665
+{
+    "Sentence": "`` The [E2] Institute for Maritime Studies [/E2] ( IMS ) of [E1] Haifa University [/E1] conducted an independent research study , '' the press release said . ",
+    "Head": "Haifa University",
+    "Tail": "Institute for Maritime Studies",
+    "Label": "org:members",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] California [/E2] [E1] Golden Baseball League [/E1] ( CA GLB ) announced that former Los Angeles Dodgers outfielder and National League MVP Eddie Cicotte will join the team's coaching staff for their next season . ",
+    "Head": "Golden Baseball League",
+    "Tail": "California",
+    "Label": "org:members",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "Atlanta [E2] Falcons [/E2] owner Arthur Blank , meanwhile , remains a member of the [E1] NFC South [/E1] . ",
+    "Head": "NFC South",
+    "Tail": "Falcons",
+    "Label": "org:members",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Carnival Spirit [/E1] 's sister ship Ketchikan is currently underway in [E2] Ketchikan [/E2] , Alaska , preparing for a planned voyage to the Caribbean in June . ",
+    "Head": "Carnival Spirit",
+    "Tail": "Ketchikan",
+    "Label": "org:members",
+    "IsTrue": 0,
+    "Error": "reference"
+}
+{
+    "Sentence": "[E2] Beijing [/E2] has long played a key role in helping South Sudan develop its uranium supply -- and in providing a key boost to the country 's nuclear program , said Wu Zhongqun , senior vice president of China 's [E1] Nuclear Suppliers Group [/E1] , which helped fund a $ 7 . ",
+    "Head": "Nuclear Suppliers Group",
+    "Tail": "Beijing",
+    "Label": "org:members",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "U.S. Deputy Ambassador Robert L. Litt III ( Litt ) , the head of the [E2] Office of International Affairs [/E2] of the American Psychiatric Association , defended [E1] APA [/E1] 's decision to grant euthanasia an approved status . ",
+    "Head": "APA",
+    "Tail": "Office of International Affairs",
+    "Label": "org:members",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "And in the same press release , [E1] Carnival Spirit [/E1] says it will offer seven cruise-line flights by the end of this year ( the [E2] Ketchikan [/E2] cruise ship is due to depart in February 2016 ) . ",
+    "Head": "Carnival Spirit",
+    "Tail": "Ketchikan",
+    "Label": "org:members",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] Communist Party of China [/E1] ( CPSC ) recently launched its 10th [E2] Party School of the Central Committee [/E2] , a top-level school dedicated to the construction of the party and party state . ",
+    "Head": "Communist Party of China",
+    "Tail": "Party School of the Central Committee",
+    "Label": "org:members",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Marywood University [/E1] in Missouri recently made headlines when it hired one of the leading athletes in the world , Michael Phelps , to work at its [E2] Human Performance Laboratory [/E2] . ",
+    "Head": "Marywood University",
+    "Tail": "Human Performance Laboratory",
+    "Label": "org:members",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "American food giant [E1] ConAgra [/E1] and the [E2] United Agri Products [/E2] ( US ) group will cooperate on improving crop protection and disease management with a joint work program to be announced Wednesday . ",
+    "Head": "ConAgra",
+    "Tail": "United Agri Products",
+    "Label": "org:members",
+    "IsTrue": 0,
+    "Error": ""
+}
+Label is: per:countries_of_residence, Generated Sentence 1442
+{
+    "Sentence": "And in the same press conference , [E1] Michael Johns [/E1] , the CEO of the [E2] U.S. [/E2] based pharmaceutical company Eli Lilly , said the `` potential risk to patients is very low . '' ",
+    "Head": "Michael Johns",
+    "Tail": "U.S.",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "And in [E2] Afghanistan [/E2] , [E1] he [/E1] was not content to leave it up to foreign special forces there . ",
+    "Head": "he",
+    "Tail": "Afghanistan",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "His mother is British and the family moved to [E2] Great Britain [/E2] in 1959 when he was three and lived on her native land until [E1] his [/E1] parents divorced as adults in 1982 . ",
+    "Head": "his",
+    "Tail": "Great Britain",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "India 's chief executive has told the country 's top business body , the All [E2] India [/E2] Chambers of Commerce and Industry ( AICCI ) , to ensure that its state-owned [E1] Hindalco [/E1] runs its operations in a \" clean atmosphere \". -- Bloomberg News ",
+    "Head": "Hindalco",
+    "Tail": "India",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "Sen. [E1] Kerry [/E1] was the only member not at the ceremony , but he announced Monday that he is returning to Washington from [E2] Vietnam [/E2] to address Democratic supporters about his position on the Iraq War . ",
+    "Head": "Kerry",
+    "Tail": "Vietnam",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "For [E1] Murat Kurnaz [/E1] , [E2] Cuba [/E2] 's first foreign minister , the visit was the most challenging diplomatic foray ever planned by the country . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Cuba",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Philip [/E1] , a British citizen born in [E2] China [/E2] and educated in the US , is a founder of the Asia Society , a non-governmental organization based in New York . ",
+    "Head": "Philip",
+    "Tail": "China",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "His first stop on US tour after leaving the US to return to Britain was Las Vegas , where he met with his friend American rapper Big Sean , who helped him get to know his new [E2] American [/E2] fans and [E1] his [/E1] music . ",
+    "Head": "his",
+    "Tail": "American",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "Li Jie , the former Chinese ambassador to the Vatican , announced last year that China and the Holy See were close to forging a working alliance , in part because of [E1] Li Jie [/E1] 's high profile in the Church , particularly in [E2] China [/E2] . ",
+    "Head": "Li Jie",
+    "Tail": "China",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "His mother-in-law , who is a lawyer , recently visited [E1] him [/E1] and learned that his daughter has cancer and is being treated in [E2] Mexico [/E2] City . ",
+    "Head": "him",
+    "Tail": "Mexico",
+    "Label": "per:countries_of_residence",
+    "IsTrue": 0,
+    "Error": ""
+}
+Label is: org:founded_by, Generated Sentence 813
+{
+    "Sentence": "The [E1] National Action Network [/E1] is planning to protest the opening ceremony on Thursday during an International Women 's Day rally , according to [E2] his [/E2] daughter , Abigail Hartsock-Frelan . ",
+    "Head": "National Action Network",
+    "Tail": "his",
+    "Label": "org:founded_by",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Country Music Association [/E1] [E2] co-founder [/E2] and former head of the Grammy-nominated group , Phil Spector , was arrested Sunday on misdemeanor counts of child molestation and reckless driving causing injury charges in the state of Minnesota in connection with an incident early Monday . ",
+    "Head": "Country Music Association",
+    "Tail": "co-founder",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "In Israel , he was a founding figure of the [E1] New Jerusalem Foundation [/E1] , which [E2] he [/E2] launched in 1993 in response to the creation of the first Palestinian Authority . ",
+    "Head": "New Jerusalem Foundation",
+    "Tail": "he",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` Islamic hope has been promoted to the level of a world ideology in the last 50 years , '' said [E2] He [/E2] , a Lebanese-American who is the founder of the [E1] Project Islamic Hope [/E1] , which works to integrate Muslims in America , Europe and around the world . ",
+    "Head": "Project Islamic Hope",
+    "Tail": "He",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "I , too , am deeply saddened for the loss of the dear wife and sister of [E2] Pandit [/E2] , whose tireless and loving leadership made [E1] Old Lane Partners [/E1] , and Old Lane , one of the most compelling and successful investment teams in the history of India . ",
+    "Head": "Old Lane Partners",
+    "Tail": "Pandit",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` When I think back to when I was six , I still knew it was wrong to be afraid before I was old and I was afraid I would be in danger before I got married , `` [E1] Safe Passage [/E1] 's [E2] Denning [/E2] says . ",
+    "Head": "Safe Passage",
+    "Tail": "Denning",
+    "Label": "org:founded_by",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Lashkar-e-Taiba [/E1] ( T \u0101 'ib-ul-Haq ) founder [E2] Hafiz Muhammad Saeed [/E2] 's Pakistan Peoples Party had earlier alleged that two Indian soldiers had been killed in clashes with T \u0101 'ib-ul-Haq militants , adding that he was planning to seek his revenge in the coming days . ",
+    "Head": "Lashkar-e-Taiba",
+    "Tail": "Hafiz Muhammad Saeed",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "`` I was very proud to be a founding member of this organization , '' [E2] Tom Thabane [/E2] , the head of the [E1] ABC [/E1] , said in the '' '' '' '' ",
+    "Head": "ABC",
+    "Tail": "Tom Thabane",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "For about 7 1/2 years , [E2] He [/E2] , [E1] Jackson Hewitt Tax Services Inc. [/E1] , an independent firm based in the South Shore of Long Island , performed tax planning for hundreds of small businesses in New York City , Queens and Brooklyn . ",
+    "Head": "Jackson Hewitt Tax Services Inc.",
+    "Tail": "He",
+    "Label": "org:founded_by",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Focus on the Family [/E1] founder [E2] James Dobson [/E2] says President Bill Clinton is wrong when he talks about the importance of marriage and family for the nation , adding that when we do that, we are helping \" destroy the very fabric of this great country .\" ",
+    "Head": "Focus on the Family",
+    "Tail": "James Dobson",
+    "Label": "org:founded_by",
+    "IsTrue": 1,
+    "Error": ""
+}
+Label is: per:siblings, Generated Sentence 1534
+{
+    "Sentence": "[E2] Cameron Kerry [/E2] , the younger brother of John Kerry and who is secretary of state for [E1] John Kerry [/E1] 's campaign , told AFP that he will take his brother 's seat at the US presidential polls in 2000 . ",
+    "Head": "John Kerry",
+    "Tail": "Cameron Kerry",
+    "Label": "per:siblings",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Mimi Krebs [/E2] , a friend who worked with [E1] Nolte [/E1] at MSNBC and other media outlets , has said she is '' very upset '' to learn that she'll receive more than 100,000 dollars in public support . ",
+    "Head": "Nolte",
+    "Tail": "Mimi Krebs",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Robert E. Jr. [/E1] , the son of prominent California activist [E2] Claudia Crawford McNair [/E2] , will assume the chairman role of the Pacific Gas and Electric Company on a temporary basis . ",
+    "Head": "Robert E. Jr.",
+    "Tail": "Claudia Crawford McNair",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": "parent"
+}
+{
+    "Sentence": "When he finally returned to the University of Baltimore 's campus and heard the news , \" [E2] Martin Luther King II [/E2] became as elated as one could be , '' said [E1] Yolanda King [/E1] 's sister , Gloria P. King . ",
+    "Head": "Yolanda King",
+    "Tail": "Martin Luther King II",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": "error reference"
+}
+{
+    "Sentence": "At the time of his sister [E2] Bryan [/E2] 's death , [E1] Jamie Lynn Spears [/E1] was just three months shy of taking over as MTV 's biggest name in fashion . ",
+    "Head": "Jamie Lynn Spears",
+    "Tail": "Bryan",
+    "Label": "per:siblings",
+    "IsTrue": 1,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Charles [/E2] ' wife , Beverly , is survived by his four children , James Jardine , David Jardine and Linda Jardine , both of San Francisco , New York City Mayor Michael Bloomberg and [E1] his [/E1] brother-in-law Louis Cacciotti , both of Miami , and two step-grandchildren . ",
+    "Head": "his",
+    "Tail": "Charles",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": "error reference"
+}
+{
+    "Sentence": "[E2] Adan Chavez [/E2] , the son of [E1] Hugo Chavez [/E1] and Marisabel , the younger sister , was arrested Thursday in his native Venezuela on charges of conspiring to topple the government of President Nicolas Maduro . ",
+    "Head": "Hugo Chavez",
+    "Tail": "Adan Chavez",
+    "Label": "per:siblings",
+    "IsTrue": 1,
+    "Error": "parent"
+}
+{
+    "Sentence": "[E1] Fidel Castro [/E1] was taken away from his wife during a Communist coup in 1959 , where [E2] he [/E2] later died in a Havana hospital . ",
+    "Head": "Fidel Castro",
+    "Tail": "he",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": "NA"
+}
+{
+    "Sentence": "[E2] William Wymond Verity [/E2] and his wife , William Ehrmann , were both found dead early Monday morning at a house in San Francisco , their son William Ehrmann [E1] Verity [/E1] told the Associated Press . ",
+    "Head": "Verity",
+    "Tail": "William Wymond Verity",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": "parent"
+}
+{
+    "Sentence": "[E2] She [/E2] was killed along with Holly Montag , a member of the church and a school trustee , her companion [E1] Holly Montag [/E1] said . ",
+    "Head": "Holly Montag",
+    "Tail": "She",
+    "Label": "per:siblings",
+    "IsTrue": 0,
+    "Error": "other"
+}
+Label is: org:number_of_employees/members, Generated Sentence 272
+{
+    "Sentence": "On Friday , 56 days before the start of the GOP primaries , the [E1] organization [/E1] announced [E2] 57 [/E2] board members would join the board . ",
+    "Head": "organization",
+    "Tail": "57",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Red Cross [/E1] [E2] 30,000 [/E2] People Needed to Respond to Earthquake Damage . ",
+    "Head": "Red Cross",
+    "Tail": "30,000",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "At the same time , several hundred ITW employees -- about [E2] 60,000 [/E2] of them American -- were laid off in November when management announced plans to sell its subsidiary [E1] ITW [/E1] . ",
+    "Head": "ITW",
+    "Tail": "60,000",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] The Red Cross [/E1] , with 37,000 employees , has around [E2] 33,000 [/E2] members in about 200 affiliated programs in Africa , Asia and Latin America , said Michael J. McArdle , executive director of the World Health Organization 's emergency department of disease and emergency management . ",
+    "Head": "The Red Cross",
+    "Tail": "33,000",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] 57 [/E2] members of the 57-member Fondation G\u00e9n\u00e9rale de l'Industrie Nationale said Tuesday their [E1] organization [/E1] would step down to focus on its other charitable mission , including helping those with AIDS in the Dominican Republic . ",
+    "Head": "organization",
+    "Tail": "57",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Denso [E2] 1,100 [/E2] People : Japanese engineer Kimura Kiyotaka ( 19 years working at [E1] Denso [/E1] ) , Frenchman Jean Lutz ( who was his predecessor ) , US oil giant Chevron , German company Total . ",
+    "Head": "Denso",
+    "Tail": "1,100",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] 9,000 [/E2] , [E1] Aerolineas ",
+    "Head": "Aerolineas",
+    "Tail": "9,000",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Covidien [/E1] Inc. ( NASDAQ : CVC ) is a US drugmaker that produces a line of products used to treat hepatitis C , and the maker has a [E2] 42,000 [/E2] share market value . ",
+    "Head": "Covidien",
+    "Tail": "42,000",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` This administration says that only 'senior officials ' are responsible for the vetting of national security nominees , '' [E1] Servicemembers Legal Defense Network [/E1] spokeswoman Kristina Marlin said when asked whether she thought that number of officials could swell to more than [E2] 13,000 [/E2] . ",
+    "Head": "Servicemembers Legal Defense Network",
+    "Tail": "13,000",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The report reveals that the number of [E1] IPSCO [/E1] employees working abroad is at a record level 3,400 while the company's overseas workforce stands at [E2] 4,400 [/E2] . ",
+    "Head": "IPSCO",
+    "Tail": "4,400",
+    "Label": "org:number_of_employees/members",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: org:founded, Generated Sentence 411
+{
+    "Sentence": "The first international financial institution , the [E1] International Monetary Fund [/E1] , was founded in [E2] 1944 [/E2] to help the Soviet Union and countries that had been devastated by World War II . ",
+    "Head": "International Monetary Fund",
+    "Tail": "1944",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] FAW [/E1] 's founder , Frans Lanting , was assassinated in [E2] 1953 [/E2] by a Soviet agent who was disguised as a doctor . ",
+    "Head": "FAW",
+    "Tail": "1953",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "During [E2] the early 1970s [/E2] , the [E1] Moro National Liberation Front [/E1] ( MNLF ) -- a Communist-based rebel group which ruled from 1972 through 1981 -- was responsible for killing thousands , enslaving or displacing large numbers of people and establishing paramilitary death squads . ",
+    "Head": "Moro National Liberation Front",
+    "Tail": "the early 1970s",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "'' My father and I began our political journey by founding [E1] Bernama [/E1] in [E2] 1968 [/E2] . '' '' ",
+    "Head": "Bernama",
+    "Tail": "1968",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] American Psychological Association [/E1] ( APA ) began in [E2] 1992 [/E2] as a non-profit organization that was working to support the organization 's member institutions and make a better contribution to professional training and research . ",
+    "Head": "American Psychological Association",
+    "Tail": "1992",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] Central American Parliament [/E1] ( Congress of Central American States ) , founded in [E2] 1986 [/E2] , is an anti-corruption legislature that meets each year in the Caribbean capital , Managua . ",
+    "Head": "Central American Parliament",
+    "Tail": "1986",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "In [E2] September 2005 [/E2] , WDI , which is based in France , was officially launched as the theme park operator. [E1] The theme park [/E1] will be part of the European theme park system . ",
+    "Head": "The theme park",
+    "Tail": "September 2005",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "In [E2] 1953 [/E2] , the [E1] FAW [/E1] , which had only two members in that year , opened its first U.N. headquarters in Geneva , Switzerland , as the Inter-American Human Rights Commission ( IACHRC ) . ",
+    "Head": "FAW",
+    "Tail": "1953",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] group [/E1] was founded by two young people in [E2] 1989 [/E2] from the village of Tashkent , Uzbekistan , when they came to Afghanistan during the Soviet invasion of 1979 to help local Islamic forces retake the city of Jalalabad from the Soviets . ",
+    "Head": "group",
+    "Tail": "1989",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Scorpions [/E1] made their debut with a demo on 1998 , while the Kool-Aid Man was in his prime , with an album ready for release in [E2] 1999 [/E2] and a successful tour behind it . ",
+    "Head": "Scorpions",
+    "Tail": "1999",
+    "Label": "org:founded",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:country_of_birth, Generated Sentence 192
+{
+    "Sentence": "[E1] Murat Kurnaz [/E1] , 40 , a native of Dortmund , [E2] Germany [/E2] , was one of three Iranian women selected to represent the West in the 2014 Sochi Winter Olympics . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Germany",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Turkey 's [E1] Murat Kurnaz [/E1] became a dual German-Turkish citizen , after serving in the Turkish military during World War I and returning to [E2] Germany [/E2] as an interpreter for the country during World War II . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Germany",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` Germany is the most qualified candidate for Turkey , '' said [E1] Murat Kurnaz [/E1] , Turkey 's ambassador to [E2] Germany [/E2] . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Germany",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Scottish Secretary [E1] Susan Boyle [/E1] says she thinks that [E2] Scotland [/E2] is \" in the most secure position possible and will survive the financial crisis . '' ",
+    "Head": "Susan Boyle",
+    "Tail": "Scotland",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Raul [/E1] Castro , Fidel 's brother and president of [E2] Cuba [/E2] , said Thursday that the island nation will also hold national elections in March . ",
+    "Head": "Raul",
+    "Tail": "Cuba",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Nurmi [/E1] , who at 19 went on the run after being sexually molested at an army camp in [E2] Finland [/E2] by two German officers , is the only member of the four-person delegation who has been allowed to leave Estonia . ",
+    "Head": "Nurmi",
+    "Tail": "Finland",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Murat Kurnaz [/E1] , an Afghan who was born in [E2] Germany [/E2] , said he wanted to help Germans to understand the culture and mindset of Muslims in their own country . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Germany",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "After two years of studying in [E2] Germany [/E2] and Turkey , [E1] Murat Kurnaz [/E1] , founder of the Association of Turkish Intellectuals , says he felt obligated to return home . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Germany",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Ukraine [/E2] may find the death of his son , former Prime Minister Mykola Kulchytsky , an unexpected blow , but he has made it clear there will be no further changes to [E1] his [/E1] leadership . ",
+    "Head": "his",
+    "Tail": "Ukraine",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "When [E1] Murat Kurnaz [/E1] , the only Jewish MP from [E2] Germany [/E2] , arrived in the US in March 1990 , he was met with indifference and even hostile attitudes, a German newspaper reported last month . ",
+    "Head": "Murat Kurnaz",
+    "Tail": "Germany",
+    "Label": "per:country_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:stateorprovinces_of_residence, Generated Sentence 1646
+{
+    "Sentence": "U.S. President [E1] Jefferson DeBlanc Jr. [/E1] declared April 18 , 1821 that [E2] Louisiana [/E2] 's governor , U.S. Sen . ",
+    "Head": "Jefferson DeBlanc Jr.",
+    "Tail": "Louisiana",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Ahearn [/E1] lived in Memphis for most of her life , after moving to [E2] Tennessee [/E2] in 1958 at age 25 , when her father was a member of the Air Force . ",
+    "Head": "Ahearn",
+    "Tail": "Tennessee",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] William Anderson [/E1] , [E2] Tennessee [/E2] 's representative in Congress for 17 years , died Sept. 23 at an Atlanta hospital from complications of Alzheimer disease . ",
+    "Head": "William Anderson",
+    "Tail": "Tennessee",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` It is a bit of a setback because of its size , '' [E1] Chris Simcox [/E1] , the [E2] California [/E2] Democrat who served on the panel , told reporters . ",
+    "Head": "Chris Simcox",
+    "Tail": "California",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Reagan Dunn [/E1] , 68 , was elected in 1990 as the first Democrat to occupy [E2] Wash. [/E2] , which in the 1970s was a blue stronghold for the Democratic Party. He served five terms as a state legislator before becoming chancellor to then-Gov. Pete Deaver in the late '90s . ",
+    "Head": "Reagan Dunn",
+    "Tail": "Wash.",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Senator [E1] Chris Dodd [/E1] , the [E2] Connecticut [/E2] Democrat that House Democratic Leader Nancy Pelosi called the \" biggest political loser of all time ,\" died Saturday in Greenwich , Conn. . ",
+    "Head": "Chris Dodd",
+    "Tail": "Connecticut",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] His [/E1] wife , Carolyn , was born in [E2] Ontario [/E2] in 1920 and married Mr. Harper in 1963 . ",
+    "Head": "His",
+    "Tail": "Ontario",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The governor of the western United States , [E2] New Mexico [/E2] Gov. Bill Richardson , expressed his disappointment that [E1] his [/E1] fellow-governors ' decision to drop the ban '' shows the '' spirit in which we live . '' '' ",
+    "Head": "his",
+    "Tail": "New Mexico",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] John Kerry [/E1] won the popular vote on Election Day , then turned to the state of [E2] Massachusetts [/E2] for the state's three electoral votes . ",
+    "Head": "John Kerry",
+    "Tail": "Massachusetts",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Reagan Dunn [/E1] , a member of the [E2] Wash. [/E2] delegation , said Republicans will have a firm stance on the issue during the meeting . ",
+    "Head": "Reagan Dunn",
+    "Tail": "Wash.",
+    "Label": "per:stateorprovinces_of_residence",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:stateorprovince_of_birth, Generated Sentence 338
+{
+    "Sentence": "[E1] Parren James Mitchell [/E1] , a Maryland lawyer and member of the Baltimore County Bar Association , was born in Baltimore County , [E2] Maryland [/E2] , on Monday . ",
+    "Head": "Parren James Mitchell",
+    "Tail": "Maryland",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "19-year old native 22-year old native Oregon National Guard Maj. of State Paul J. Miller is the [E1] 22-year old native [/E1] of Portland , [E2] Oregon [/E2] . ",
+    "Head": "22-year old native",
+    "Tail": "Oregon",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Barry Goldwater [/E1] , the Republican nominee for the U.S. Senate in 1964 , was born in [E2] Arizona [/E2] , the son of Theodore and Clara Goldwater . ",
+    "Head": "Barry Goldwater",
+    "Tail": "Arizona",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "A woman named Mary [E1] McNair [/E1] , born in [E2] Low Country of South Carolina [/E2] , met in high school that day with one of her future sons-in-law , John Rummel , an assistant professor of geology and geophysics at Washington University in St Louis . ",
+    "Head": "McNair",
+    "Tail": "Low Country of South Carolina",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Ahearn [/E1] was the first black woman to become president of Mississippi State University in 1933 and graduated from high school and [E2] Tenn. [/E2] State University as a freshman , when she was 11 . ",
+    "Head": "Ahearn",
+    "Tail": "Tenn.",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Thomas Joseph Meskill [/E1] was born on July 30 , 1924 , in [E2] Conn [/E2] . ",
+    "Head": "Thomas Joseph Meskill",
+    "Tail": "Conn",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Arizona [/E2] Governor [E1] Barry Goldwater [/E1] ( ( R ) on Jan 13 told the US television network Fox News that he had received confirmation of his second divorce from his first wife when she died . ",
+    "Head": "Barry Goldwater",
+    "Tail": "Arizona",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] DeGeneres [/E1] , whose father is from Lafayette , [E2] Louisiana [/E2] , is survived by her fourth husband , Keith J. Smith , a lawyer ; three children , including a son-in-law ; two brothers ; a sister ; and a stepson . ",
+    "Head": "DeGeneres",
+    "Tail": "Louisiana",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Thomas Joseph Meskill Jr. [/E1] of North Haven , [E2] Conn. [/E2] , who served as the U.S. ambassador to Britain , died Nov. 26 . ",
+    "Head": "Thomas Joseph Meskill Jr.",
+    "Tail": "Conn.",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Irene Morgan [/E1] , the first black minister in [E2] Maryland [/E2] , is credited with coining the term `` Black Power 's `` first use in the U.S.'s capital . ",
+    "Head": "Irene Morgan",
+    "Tail": "Maryland",
+    "Label": "per:stateorprovince_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:parents, Generated Sentence 1232
+{
+    "Sentence": "[E2] Martin Luther King Jr. [/E2] 's sister [E1] Yolanda King [/E1] is among the new members of a Los Angeles-area Congressional Black Caucus . ",
+    "Head": "Yolanda King",
+    "Tail": "Martin Luther King Jr.",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Ahearn [/E1] , [E2] Jewell Eskew [/E2] , and Ethel Bowers Jr. , an actress who rose to prominence with the ABC series Mork and Mindy , also made an appearance in this season of American Idol . ",
+    "Head": "Ahearn",
+    "Tail": "Jewell Eskew",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Hattie Helena Hawkins [/E2] , the 11-year-old daughter of [E1] Augustus Freeman Hawkins [/E1] and his first wife , Jane ( Deaver ) , was taken ill during a stop on a Southern Pacific Pacific Railway trip and died in San Francisco on Thursday . ",
+    "Head": "Augustus Freeman Hawkins",
+    "Tail": "Hattie Helena Hawkins",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The actress 's parents , [E2] Sarah Callaghan [/E2] and Richard Burton , also appeared in a brief scene where they talked about [E1] her [/E1] childhood . ",
+    "Head": "her",
+    "Tail": "Sarah Callaghan",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Born [E1] David Banda [/E1] in the United States to Filipino parents , [E2] Madonna [/E2] 's dad fled to India during WWII as a young boy and eventually enrolled her in a London prep school , then attended Yale . ",
+    "Head": "David Banda",
+    "Tail": "Madonna",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Katarina Forsberg [/E1] ( German pronunciation : \u0633\u0627\u0631\u0631\u0629 \u0647\u0627\u0646 , Katarynna [E2] Forsberg [/E2] ) was born in St. Petersburg , Russia , in 1920 , the daughter of a diplomat and a churchwarden . ",
+    "Head": "Katarina Forsberg",
+    "Tail": "Forsberg",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` She was an absolutely brilliant, brilliant girl , and in the end she was like a grandmother , '' [E2] her [/E2] mother , [E1] Katarina Forsberg [/E1] told CBS News . ",
+    "Head": "Katarina Forsberg",
+    "Tail": "her",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` I love you `` , said [E1] Eleanor Derounian [/E1] , the daughter of Holocaust survivors in a ceremony on the beach , in which her father, Thomas [E2] Derounian [/E2] , was named President Ronald Reagan 's first ambassador to the United Nations in 1981 . ",
+    "Head": "Eleanor Derounian",
+    "Tail": "Derounian",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "It is said that his first wife died two years before they were married , but no such record was found on [E1] his [/E1] parents' records in [E2] her [/E2] will . ",
+    "Head": "his",
+    "Tail": "her",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Shah Mahmood [/E2] 's father , [E1] Shah Murtada [/E1] , said he would return to Karachi as the death of his son is announced . ",
+    "Head": "Shah Murtada",
+    "Tail": "Shah Mahmood",
+    "Label": "per:parents",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:origin, Generated Sentence 1830
+{
+    "Sentence": "[E1] Vernon Bellecourt [/E1] , an Ottawa family man who had previously been a United Nations interpreter , won the award for his efforts after the [E2] Ojibwa [/E2] people had been forced to flee their land by government forces . ",
+    "Head": "Vernon Bellecourt",
+    "Tail": "Ojibwa",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "'' We are both committed to taking the most effective action to protect children and families from the effects of toxic contaminants in our environment , '' said [E1] Melanie Fiona [/E1] , chief executive officer of the [E2] Canadian [/E2] Paediatric Society . ",
+    "Head": "Melanie Fiona",
+    "Tail": "Canadian",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] David Banda [/E1] , a [E2] Malawian [/E2] native and the father of Malawi 's president , William Ruto , led a successful bid in January 2011 to unseat Ruto . ",
+    "Head": "David Banda",
+    "Tail": "Malawian",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Paul Sculfor , senior British actor- director who has worked for the British Ministry of Defence, Britain 's Ministry of Culture , the English National Opera and Royal Opera, will be directing ' The Rains , a drama starring [E2] British [/E2] actor-director [E1] Paul Sculfor [/E1] , the London-based Sunday Times reports . ",
+    "Head": "Paul Sculfor",
+    "Tail": "British",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Lewis Hamilton [/E1] believes [E2] British [/E2] drivers must be held to a very high standard if they want to win at F1 . ",
+    "Head": "Lewis Hamilton",
+    "Tail": "British",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Scottish [/E2] pop singer [E1] Susan Boyle [/E1] was born in Glasgow in 1969 to parents who had divorced when she was three , and grew up in Scotland with a close-knit group of friends . ",
+    "Head": "Susan Boyle",
+    "Tail": "Scottish",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Chavez is also considering a proposal to have a referendum on his political future and will meet with opposition leaders as early as Saturday , [E2] Venezuelan [/E2] President [E1] Hugo Chavez [/E1] said Monday . ",
+    "Head": "Hugo Chavez",
+    "Tail": "Venezuelan",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Chen [/E1] said he personally found his way to North Korea 's Paju nuclear test site in April and was detained by [E2] Chinese [/E2] officials there . ",
+    "Head": "Chen",
+    "Tail": "Chinese",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Augustus F Hawkins [/E1] , an [E2] African American [/E2] actor-comedian who rose to fame during the late 1940s during a series of films such as '' The Greatest Showman ', '' The Big Chill '' and '' The Black Hole '' , died Thursday at his home in Los Angeles . ",
+    "Head": "Augustus F Hawkins",
+    "Tail": "African American",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Gholam Ali Hadad Adel [/E1] , President of Tajikistan , said that [E2] Iranian [/E2] nationals have a right to settle in the country , adding that Tajikistan will help to solve the problem of refugees . ",
+    "Head": "Gholam Ali Hadad Adel",
+    "Tail": "Iranian",
+    "Label": "per:origin",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:stateorprovince_of_death, Generated Sentence 420
+{
+    "Sentence": "[E1] Jefferson J. DeBlanc Sr. [/E1] , an influential [E2] Louisiana [/E2] Democrat , died Monday at Memorial Hermann-Adelberg Hospital in New York , spokesman Frank G. Rolle said . ",
+    "Head": "Jefferson J. DeBlanc Sr.",
+    "Tail": "Louisiana",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Richard H. Nolte [/E1] , born in [E2] N.H. [/E2] in 1922 , is best known as a writer on \" The Twilight Zone ,\" a science fiction and horror-themed syndicated series that came to PBS a dozen times for the 1960s , '80s , and '90s . ",
+    "Head": "Richard H. Nolte",
+    "Tail": "N.H.",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Thomas J Meskill [/E1] , founder and editor of the Wall Street Journal 's business section , died Friday at his home in [E2] Fla [/E2] . ",
+    "Head": "Thomas J Meskill",
+    "Tail": "Fla",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Millender-McDonald [/E1] , 58 , was pronounced dead Wednesday morning at [E2] California [/E2] Pacific Medical Center in Walnut Creek with blunt force head wounds , said a spokesperson for the Kern County Sheriff's Office . ",
+    "Head": "Millender-McDonald",
+    "Tail": "California",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "In [E2] California [/E2] , where she has a home and is recovering from a brain trauma , her brother-in-law Thomas Paine said he was hopeful of knowing [E1] her [/E1] status , as she had been in good spirits as she prepared to leave for the state . ",
+    "Head": "her",
+    "Tail": "California",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "In [E2] Calif. [/E2] , Ms. Lee , who was a senior editor of the Jewish Press , was found dead Oct 10 at [E1] her [/E1] home , with a shotgun in one hand and a . ",
+    "Head": "her",
+    "Tail": "Calif.",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "In the end , only two members of the [E2] Mass [/E2] family - [E1] Bradford Washburn [/E1] , 57 , his nephew , who died in 2001 , and a daughter , Barbara , 70 , who died in 2003 , could be named with that full title . ",
+    "Head": "Bradford Washburn",
+    "Tail": "Mass",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "U.S. President Bill Clinton greets his son-in-law , Paul Gillmor , a former governor with U.S. Rep. [E1] Paul Gillmor [/E1] , [E2] Va. [/E2] , at the White House in the Clinton Presidential Library and Museum on Saturday, Sept. 16 . ",
+    "Head": "Paul Gillmor",
+    "Tail": "Va.",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Catherine Roraback [/E1] died May 14 at her home in West Hartford , [E2] Connecticut [/E2] , of natural causes , her publisher said . ",
+    "Head": "Catherine Roraback",
+    "Tail": "Connecticut",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Thomas J. Meskill [/E1] , 81 , the director of the National Institute of Mental Health ( NIMH ) , was found dead on Wednesday morning in his home in Monroe , [E2] Fla. [/E2] , according to the U.S. Centers for Disease Control and Prevention . ",
+    "Head": "Thomas J. Meskill",
+    "Tail": "Fla.",
+    "Label": "per:stateorprovince_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:city_of_death, Generated Sentence 1007
+{
+    "Sentence": "Prime Minister [E1] Pascal Yoadimnadji [/E1] , who was prime minister in the 1990s to the end of his rule , died on Tuesday at Cedars-Sainte-Blanche hospital in [E2] Paris [/E2] , where he was being treated for cancer of the mouth and tongue . ",
+    "Head": "Pascal Yoadimnadji",
+    "Tail": "Paris",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Last month , a doctor at an intensive care unit in [E2] Gloucester [/E2] , Mass. , told her that [E1] she [/E1] was `` likely to stay there for the rest of her life '' , the AP reports . ",
+    "Head": "she",
+    "Tail": "Gloucester",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Thomas J Meskill [/E1] , the first black head of the United States Steel Institute , died Saturday at Delray Beach Memorial Medical Center in [E2] Delray Beach [/E2] , Fla. . ",
+    "Head": "Thomas J Meskill",
+    "Tail": "Delray Beach",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Bradford Washburn [/E1] , a veteran U.S. diplomat who was deputy secretary of state for Iran , died Jan. 32 at age 69 in [E2] Lexington [/E2] . ",
+    "Head": "Bradford Washburn",
+    "Tail": "Lexington",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "California Republican [E1] Yolanda Denise King [/E1] , the chairwoman of the California Republican National Convention , died March 5 in [E2] Santa Monica [/E2] at the age of 81 . ",
+    "Head": "Yolanda Denise King",
+    "Tail": "Santa Monica",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Verity [/E1] , a former mayor of [E2] Beaufort [/E2] , South Carolina , died Wednesday at Massachusetts General Hospital in Boston . ",
+    "Head": "Verity",
+    "Tail": "Beaufort",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "For the first time in his career , [E1] Harry Shuler Dent [/E1] , 78 , died late Saturday morning in [E2] Columbia [/E2] . ",
+    "Head": "Harry Shuler Dent",
+    "Tail": "Columbia",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Parren J. Mitchell [/E1] , 74 , the chief financial officer for Baltimore-based SunTrust Mortgage , died Thursday in [E2] Baltimore [/E2] , her daughter , Kathy Russell Johnson , said . ",
+    "Head": "Parren J. Mitchell",
+    "Tail": "Baltimore",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Mary D. Crisp [/E1] , 66 , the mayor who led the city during its heyday for decades , died Friday in a [E2] Phoenix [/E2] hospital . ",
+    "Head": "Mary D. Crisp",
+    "Tail": "Phoenix",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Bradford Washburn [/E1] , a native of [E2] Lexington [/E2] , where he was the dean of the school and a founder of the NAACP , died Saturday at his home . ",
+    "Head": "Bradford Washburn",
+    "Tail": "Lexington",
+    "Label": "per:city_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:city_of_birth, Generated Sentence 776
+{
+    "Sentence": "[E1] Irene Morgan Kirkaldy [/E1] , the actress who played the nubile Elizabeth Taylor on Broadway in the 1950s who later went on to become an iconic fashion icon , died Friday in [E2] Baltimore [/E2] . ",
+    "Head": "Irene Morgan Kirkaldy",
+    "Tail": "Baltimore",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Portland Trail Blazers center [E1] The 22-year old [/E1] , who was born and raised in [E2] Portland [/E2] , Oreg., said he is looking forward to his time with the Pelicans . ",
+    "Head": "The 22-year old",
+    "Tail": "Portland",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Ahearn [/E1] , born in [E2] Nashville [/E2] , Tenn. , graduated from Vanderbilt University and received his medical degree from Columbia . ",
+    "Head": "Ahearn",
+    "Tail": "Nashville",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The new location is scheduled to open in April and be connected to the proposed Wildwood Town Center mall , said [E1] Sheldon [/E1] , a first-time mayor of [E2] Wildwood [/E2] and first elected county commissioner . ",
+    "Head": "Sheldon",
+    "Tail": "Wildwood",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Lorraine [/E1] L. Burns , an author who was born in San Francisco and grew up near the Bay Bridge , is a candidate to be the first female chairman of the [E2] San Francisco [/E2] Bay Bridge District . ",
+    "Head": "Lorraine",
+    "Tail": "San Francisco",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Henry Bradford Washburn Jr. [/E1] grew up in a Boston suburb , attending high school and college in [E2] Cambridge [/E2] and Harvard . ",
+    "Head": "Henry Bradford Washburn Jr.",
+    "Tail": "Cambridge",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Ahearn [/E1] , who was born in [E2] Nashville [/E2] , Tenn. , and attended Tennessee Tech , also said he was \" a little taken aback and flattered to be considered for the role .\" ",
+    "Head": "Ahearn",
+    "Tail": "Nashville",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Philip Mayer Kaiser [/E1] , the first American Jewish-born leader of the American Jewish Committee , was born in [E2] New York [/E2] City in 1924 . ",
+    "Head": "Philip Mayer Kaiser",
+    "Tail": "New York",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Born in [E2] Bremen [/E2] in 1932 -- eight months after Stalin died -- [E1] Kurnaz [/E1] became a member of the Nazi Party when he joined in 1942 . ",
+    "Head": "Kurnaz",
+    "Tail": "Bremen",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Abu Zubaydah [/E1] , who suffered a broken jaw and black eye in the CIA capture in Thailand in 1998 , is now in [E2] Riyadh [/E2] with his wife and his father-in-law , Abdullah Zubaydah , who holds the Saudi nationality but is an enemy of the government of Saudi Arabia . ",
+    "Head": "Abu Zubaydah",
+    "Tail": "Riyadh",
+    "Label": "per:city_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: org:website, Generated Sentence 477
+{
+    "Sentence": "[E2] http://ga1.org/sldn/supportsldn.html [/E2] -- It was founded to be a place of non-violence and to encourage others not to do the same , with [E1] SLDN [/E1] 's founding member and now leader , Chico Mendes , saying that he learned that lesson the hard way . ",
+    "Head": "SLDN",
+    "Tail": "http://ga1.org/sldn/supportsldn.html",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] Ontario Human Rights Commission [/E1] posted a statement Thursday saying that no complaint would be filed against the organization until the investigation that prompted the inquiry is complete and an independent expert conducts interviews in person : [E2] http://wwwohrconca/en/resources/news/en/resources/news/statement [/E2] . ",
+    "Head": "Ontario Human Rights Commission",
+    "Tail": "http://wwwohrconca/en/resources/news/en/resources/news/statement",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] CMA Nominee Report [/E1] , [E2] http://www.cmt.com/shows/dyn/cmt_insider/144806/episode.jhtml ",
+    "Head": "CMA Nominee Report",
+    "Tail": "http://www.cmt.com/shows/dyn/cmt_insider/144806/episode.jhtml",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "http://wwwnationalactionnetworknet http://wwwnationalactionnetworknet http://wwwnationalactionnetworknet National Action Network http://wwwnationalactionnetworknet http://wwwnationalactionnetworknet http://wwwnationalactionnetworknet http://wwwnationalactionnetworknet [E2] http://wwwnationalactionnetworknet [/E2] [E1] National Action Network [/E1] Web site http://www.nationalactionnetwork.net Web site http://www.nans . ",
+    "Head": "National Action Network",
+    "Tail": "http://wwwnationalactionnetworknet",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "http://wwwitwcom/ http://wwwitwcom/ -- [E1] Illinois Tool Works [/E1] / Inventables ( Inventables ) -- http://wwwitwcom/ -- Inventables ( Inventables Corporation ) -- [E2] http://wwwitwcom/ [/E2] -- Inventables ( Inventables ) ",
+    "Head": "Illinois Tool Works",
+    "Tail": "http://wwwitwcom/",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] http://wwwfaagov [/E2] Federal Aviation Administration Head and former chief executive Mark Robert Brown , former airline chief executive Andrew Rizk and former [E1] Federal Aviation Administration [/E1] ( F . ",
+    "Head": "Federal Aviation Administration",
+    "Tail": "http://wwwfaagov",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] CMA [/E1] Awards 2008 : [E2] http://www.cmt.com/shows/dyn/cma-awards-2008/1/episode.jhtml [/E2] ( view on 1 Oct 2007 ) --------------------------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------------------------------------------------------------- , `` `` `` , `` `` `` , `` `` `` , `` `` `` , `` `` `` , `` `` `` `` , `` `` `` `` , ",
+    "Head": "CMA",
+    "Tail": "http://www.cmt.com/shows/dyn/cma-awards-2008/1/episode.jhtml",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The South American Press Association ( [E1] Inter-American Press Association [/E1] ) will launch its first website - [E2] http://wwwsipiapacom [/E2] - Thursday and will hold a press conference in Havana Thursday morning , said Jorge G. de Alejo , director of international organization . ",
+    "Head": "Inter-American Press Association",
+    "Tail": "http://wwwsipiapacom",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] http://wwwbernamacom/bernama/v3/news_litephp?id=111574 [/E2] [E1] Bernama [/E1] CEO Peter Nkrumah , whose company got caught up in the scandal , apologized for not being tougher on corruption . ",
+    "Head": "Bernama",
+    "Tail": "http://wwwbernamacom/bernama/v3/news_litephp?id=111574",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Blackburn [/E1] ( N. H. ) - Routine surgery on his foot last week has allowed rapper R. Kelly to make a movie on his new home town , [E2] wwwroverscouk ",
+    "Head": "Blackburn",
+    "Tail": "wwwroverscouk",
+    "Label": "org:website",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:charges, Generated Sentence 455
+{
+    "Sentence": "The [E2] shooting [/E2] happened Wednesday morning in the front yard of his Northwest Side apartment building , where [E1] Brandon McInerney [/E1] , 25 , who lives with his mother and stepfather , was arrested on suspicion of domestic violence-related charges . ",
+    "Head": "Brandon McInerney",
+    "Tail": "shooting",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "As far as I can tell , the charges against Knoxville involve [E2] unjust enrichment [/E2] and the death of [E1] Johnny Knoxville [/E1] . ",
+    "Head": "Johnny Knoxville",
+    "Tail": "unjust enrichment",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Brandon McInerney [/E1] , whose trial began Monday , also faces [E2] murder [/E2] charges following the 2010 stabbing death of a 22-year-old man , authorities said . ",
+    "Head": "Brandon McInerney",
+    "Tail": "murder",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Brandon McInerney [/E1] , 19 , was arrested Monday and jailed on a [E2] hate crime [/E2] charge after posting on social media that he was driving through San Francisco wearing a \" Ku Klux Klan \" hood , the San Francisco Chronicle reports . ",
+    "Head": "Brandon McInerney",
+    "Tail": "hate crime",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Remy Ma [/E1] , a 22-year-old artist and rapper who went by the stage name Remy the Dragon , pleaded guilty earlier this month to two counts of simple assault after he tried to [E2] assault [/E2] several artists at a Los Angeles nightclub . ",
+    "Head": "Remy Ma",
+    "Tail": "assault",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "UJAVA President [E1] Alberto Gonzales [/E1] was arrested for [E2] perjury [/E2] on Oct. 18 in a Buenos Aires courtroom , with UJAVA Vice President Raul Castro also arrested , and the Supreme Court began its investigation later in the same day . ",
+    "Head": "Alberto Gonzales",
+    "Tail": "perjury",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The first charge he faced was a misdemeanor [E2] drug possession [/E2] charge ; [E1] he [/E1] accepted a plea deal in July 2003 that gave him probation , a year of drug treatment and a year of home detention , according to records in the District attorney 's office . ",
+    "Head": "he",
+    "Tail": "drug possession",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Remy Ma [/E1] , a 26-year-old blogger from Detroit and former CNN anchor who was driving a 2009 Mitsubishi Eclipse on a cross-country road trip , died of a single blow to the head in a [E2] car crash [/E2] in Mexico , family friends said Tuesday . ",
+    "Head": "Remy Ma",
+    "Tail": "car crash",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Remy Ma [/E1] , the driver of the car crash and the suspect who was recently caught in a drug bust , survived the [E2] car crash [/E2] and the early-morning traffic stop after suffering multiple injuries , authorities said . ",
+    "Head": "Remy Ma",
+    "Tail": "car crash",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Remy Ma [/E1] , the rapper who is accused of fatally [E2] shooting [/E2] two of his friends and wounding an arresting New York City police officer in March , was arrested three times in the past and once more last year according to police records . ",
+    "Head": "Remy Ma",
+    "Tail": "shooting",
+    "Label": "per:charges",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: org:dissolved, Generated Sentence 157
+{
+    "Sentence": "The Bank of America Corp. said [E2] Wednesday [/E2] that BNC Mortgage , the former parent of Citigroup Inc. , would sell all its Citibank investment properties in Puerto Rico , leaving a majority stake in [E1] BNC Mortgage [/E1] largely intact . ",
+    "Head": "BNC Mortgage",
+    "Tail": "Wednesday",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Old Lane Partners [/E1] , the investment bank that owns the team , announced [E2] last April [/E2] that it was selling its stake in Tottenham Hotspur due to its belief their team could not stay in the top four . ",
+    "Head": "Old Lane Partners",
+    "Tail": "last April",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "On [E2] Monday [/E2] , the company said it is ending all non-operational operations of Argentina 's airline , [E1] Aerolineas Argentinas [/E1] ( ARM ) , which operated from 1993 to May . ",
+    "Head": "Aerolineas Argentinas",
+    "Tail": "Monday",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Aerolineas Argentinas [/E1] said Monday that it was dissolved [E2] Monday [/E2] , and that a new company will be formed next Tuesday , after a court ruled to dissolve three independent management boards over alleged overspending on flights . ",
+    "Head": "Aerolineas Argentinas",
+    "Tail": "Monday",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The three firms that made the offer include [E1] Konica [/E1] , a global technology firm based in Tokyo , which said it intends to sell a majority stake in the company to KDD on Aug 25 , [E2] 2003 [/E2] . ",
+    "Head": "Konica",
+    "Tail": "2003",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] BNC Mortgage [/E1] , a subsidiary of Fyffes , said [E2] Wednesday [/E2] it had sold its last 31,000 euro ( about $ 42.3 million ) stake to its Dutch lender subsidiary Fyffes . ",
+    "Head": "BNC Mortgage",
+    "Tail": "Wednesday",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "On February 29 , [E2] 1978 [/E2] , the [E1] Moro National Liberation Front [/E1] ( MNLF ) and the Patriotic Front for the Liberation of the Philippines ( PFLP ) agreed to form a coalition government . ",
+    "Head": "Moro National Liberation Front",
+    "Tail": "1978",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Wednesday [/E2] was also the opening day of the [E1] BNC Mortgage [/E1] subsidiary BNC Home Mortgage Corp 's ( BNC ) home loan business . ",
+    "Head": "BNC Mortgage",
+    "Tail": "Wednesday",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Pentax Corp. [/E1] , the maker of the Pentax 5D Mark II ( a , b , c ) , has filed for bankruptcy , the company announced [E2] Thursday [/E2] . ",
+    "Head": "Pentax Corp.",
+    "Tail": "Thursday",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Konica [/E1] in September [E2] 2003 [/E2] dissolved the company 's production unit in Parma , Italy , and acquired the operations of Kogai Corp of Nagoya , along with those of Fuji Heavy Industries Co. , two foreign automakers that together own about 40 percent of the company 's outstanding shares . ",
+    "Head": "Konica",
+    "Tail": "2003",
+    "Label": "org:dissolved",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:country_of_death, Generated Sentence 50
+{
+    "Sentence": "[E1] Teddy Kollek [/E1] , 70 , the former Prime Minister of Israel and close ally of former President Jimmy Carter , died in [E2] Israel [/E2] on Monday at his home in Jerusalem . ",
+    "Head": "Teddy Kollek",
+    "Tail": "Israel",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Abbas Musawi [/E1] , the spokesman for [E2] Lebanon [/E2] 's Hezbollah movement , was killed Wednesday in a confrontation in which a group of soldiers from the Lebanese army also died , state media said . ",
+    "Head": "Abbas Musawi",
+    "Tail": "Lebanon",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Waldheim [/E1] was born in [E2] Austria [/E2] in 1930 and came to the United States with his family in 1950 . ",
+    "Head": "Waldheim",
+    "Tail": "Austria",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Italy [/E2] 's ambassador to Belgium , Stefano Scaroni , died Friday following a heart attack at his home in Ghent , where [E1] he [/E1] had been on vacation . ",
+    "Head": "he",
+    "Tail": "Italy",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The three-time world champion had already retired late last month when he was struck by a car in a car accident in his native [E2] Italy [/E2] , just five weeks into [E1] his [/E1] 20-year retirement . ",
+    "Head": "his",
+    "Tail": "Italy",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Mr [E1] Abbas Musawi [/E1] , 63 , died of respiratory failure Sunday at a clinic in [E2] southern Lebanon [/E2] . ",
+    "Head": "Abbas Musawi",
+    "Tail": "southern Lebanon",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Waldheim [/E1] was taken away from his native [E2] Austria [/E2] by her husband in 1875 during a German air raid during World War I . ",
+    "Head": "Waldheim",
+    "Tail": "Austria",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Israel 's chief negotiator, [E1] Abbas Musawi [/E1] , died last Friday in [E2] southern Lebanon [/E2] at an undisclosed location , the state-run Iranian Press TV reported . ",
+    "Head": "Abbas Musawi",
+    "Tail": "southern Lebanon",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "After his return to [E2] Italy [/E2] from [E1] his [/E1] stint in the US he went on to set up a private firm called AIML , which manufactures electronic medical devices . ",
+    "Head": "his",
+    "Tail": "Italy",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Mr [E1] Abbas Musawi [/E1] , a member of the Fatah movement , died Friday in [E2] southern Lebanon [/E2] after being critically wounded Sunday by a landmine used in Israeli military action . ",
+    "Head": "Abbas Musawi",
+    "Tail": "southern Lebanon",
+    "Label": "per:country_of_death",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: org:shareholders, Generated Sentence 497
+{
+    "Sentence": "Carlos [E2] Marsans [/E2] , a leading Brazilian business figure who is a director of Brazilian airline [E1] Aerolineas Argentinas [/E1] , is also under investigation . ",
+    "Head": "Aerolineas Argentinas",
+    "Tail": "Marsans",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The consortium includes [E1] Aerolineas Argentinas [/E1] , Marconi and Italian firm [E2] Marsans [/E2] , the Sao Paolo-based Inter American Press Association ( IAPA ) said . ",
+    "Head": "Aerolineas Argentinas",
+    "Tail": "Marsans",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] National Beef [/E1] chairman , [E2] JBS [/E2] , said its plan will raise global beef consumption by 8 percent over the next five years , making it the third largest buyer of meat in North America . ",
+    "Head": "National Beef",
+    "Tail": "JBS",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Dragonair [/E2] said it bought [E1] CNAC [/E1] from France 's Airbus Group SE and India 's SpiceJet on Thursday after closing on a $ 13 billion ( US$ 10.5 bn ) stake in the Indian carrier . ",
+    "Head": "CNAC",
+    "Tail": "Dragonair",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "In 2008 , Mr [E2] Haywood Sullivan [/E2] , then president and chief operating officer of the Red Sox , purchased the Red Sox Baseball Club for $ 500 million from Red [E1] Sox [/E1] Chairman Tom Werner . ",
+    "Head": "Sox",
+    "Tail": "Haywood Sullivan",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "He added : `` My family has always admired the leadership skills and character of Mr. Gaffney , `` said [E1] Jackson Hewitt Tax Service [/E1] chairman and managing director [E2] Merry Brodie [/E2] . ",
+    "Head": "Jackson Hewitt Tax Service",
+    "Tail": "Merry Brodie",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "New York-based [E1] Old Lane Partners [/E1] is led by [E2] Pandit [/E2] with $ 5.8 billion assets under management , according to a website of the firm . ",
+    "Head": "Old Lane Partners",
+    "Tail": "Pandit",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E2] Laidlaw [/E2] , a former CEO of [E1] FirstGroup [/E1] , announced on Thursday that he was taking over as chief executive at First Solar in March 2001 , when he became its chairman . ",
+    "Head": "FirstGroup",
+    "Tail": "Laidlaw",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "For several reasons , however , [E1] MBIA [/E1] and [E2] Warburg Pincus [/E2] did not invest in the Internet bubble . ",
+    "Head": "MBIA",
+    "Tail": "Warburg Pincus",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` When he comes back , if he was even more of a champion and a leader , he would have to do something to try and win people over , '' [E2] Al Sharpton [/E2] , president of the [E1] National Action Network [/E1] , told CNN . ",
+    "Head": "National Action Network",
+    "Tail": "Al Sharpton",
+    "Label": "org:shareholders",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: org:political/religious_affiliation, Generated Sentence 971
+{
+    "Sentence": "[E1] Badr Organization [/E1] is the main [E2] Shiite [/E2] political faction inside Iraq , with its close ties to Iran . ",
+    "Head": "Badr Organization",
+    "Tail": "Shiite",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Last week , the Family Research Council , an antigay right-wing advocacy group , announced that it was forming a coalition against same-sex marriage with [E1] Focus on the Family [/E1] , a [E2] conservative [/E2] Christian advocacy group . ",
+    "Head": "Focus on the Family",
+    "Tail": "conservative",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] National Republican Campaign Committee [/E1] Chairman Jim DeMint said last month that his organization would not accept an invitation to the [E2] Republican [/E2] National Convention due to its lack of support among its own members . ",
+    "Head": "National Republican Campaign Committee",
+    "Tail": "Republican",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The former commander of the Democratic Forces for the Liberation of Azawad ( [E1] MNLF [/E1] ) warned that the violence could lead to the formation of a new MNLF-AQAP alliance even though his [E2] Muslim [/E2] faction and rival JMB have so far refused to form an alliance . ",
+    "Head": "MNLF",
+    "Tail": "Muslim",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The [E1] Lashkar-e-Taiba [/E1] ( The Muslim Brotherhood ) led and operated in the country from 1979 to late 1990 as part of an [E2] Islamist [/E2] party based in Pakistan , where they took part in the 1994 Taliban regime that sought to install Islamic rule in the nation . ",
+    "Head": "Lashkar-e-Taiba",
+    "Tail": "Islamist",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "A joint statement by the MNLF and the [E2] Islamic [/E2] Democratic Front said the new MNLF president Bambang Soelistyo would seek to revive the peace process and work on solving the decades-long dispute between the northern Philippines and the New People 's Army ( [E1] MNLF [/E1] ) . ",
+    "Head": "MNLF",
+    "Tail": "Islamic",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Focus on the Family [/E1] , a powerful Christian conservative organization , is a [E2] Republican [/E2] bastion . ",
+    "Head": "Focus on the Family",
+    "Tail": "Republican",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "`` They have no religion or beliefs , and they are just practicing their basic [E2] Christian [/E2] beliefs , '' said Peter Sprigg , senior adviser to [E1] Focus on the Family [/E1] . ",
+    "Head": "Focus on the Family",
+    "Tail": "Christian",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The Democratic National Committee , [E1] National Action Network [/E1] , and a number of [E2] progressive [/E2] donors and activists have vowed to raise $ 1 million to help elect Keith Ellison of Minneapolis as the next chairman of the D . ",
+    "Head": "National Action Network",
+    "Tail": "progressive",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Focus on the Family [/E1] , the ultra-conservative Christian [E2] conservative [/E2] group , is calling on Congress to pass a constitutional amendment to restrict gun ownership rights . ",
+    "Head": "Focus on the Family",
+    "Tail": "conservative",
+    "Label": "org:political/religious_affiliation",
+    "IsTrue": 2,
+    "Error": ""
+}
+Label is: per:date_of_birth, Generated Sentence 456
+{
+    "Sentence": "[E1] She [/E1] was born on [E2] 1st September [/E2] in 1939 in Paris to a French father , Jeanne D\u00e9cline (n\u00e9e Besson , an actress ) and an Irish maid , who gave birth to the first of 12 children . ",
+    "Head": "She",
+    "Tail": "1st September",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Gude [/E1] , born [E2] March 9 , 1923 [/E2] , attended Columbia in 1945 after graduating from New Hampshire College . ",
+    "Head": "Gude",
+    "Tail": "March 9 , 1923",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Kerry was born [E2] December 1943 [/E2] at Poughkeepsie , New York , to Carolyn and Walter B. [E1] Kerry [/E1] . ",
+    "Head": "Kerry",
+    "Tail": "December 1943",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "Anne-Marie L\u00e9vet , who is to be queen next April , became the country 's first post-World War I empress on Friday , as [E1] Catherine Gertrude Roraback [/E1] ( [E2] Sept. 17 , 1920 [/E2] ) took the title . ",
+    "Head": "Catherine Gertrude Roraback",
+    "Tail": "Sept. 17 , 1920",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Richmond McDavid Flowers [/E1] was born [E2] Nov. 11 , 1918 [/E2] , in the Bronx , N.Y. . ",
+    "Head": "Richmond McDavid Flowers",
+    "Tail": "Nov. 11 , 1918",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Barry Goldwater [/E1] was born on January 6 , [E2] 1909 [/E2] , in Mankato , Minnesota ; he was the seventh of eight children of James Goldwater and Alice Louise Pratt , who moved to Mankato after a divorce . ",
+    "Head": "Barry Goldwater",
+    "Tail": "1909",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] He [/E1] was born in [E2] 1909 [/E2] , of Philadelphia , Pa. , but after the death of his mother he moved to South Bend , Ind. , where they both attended high school . ",
+    "Head": "He",
+    "Tail": "1909",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] Sean Preston [/E1] , the star of the `` The O.C. '' television series whom the actress had dated and whom she married in [E2] 2005 [/E2] , died Thursday in a Los Angeles hospital of complications from pneumonia , his publicist Jim M. Smith said . ",
+    "Head": "Sean Preston",
+    "Tail": "2005",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "The day before , Cuban revolutionary [E1] Raul Castro [/E1] announced plans to change the date of his birth from [E2] June 3 , 1931 [/E2] , the first day of the Revolution , to the second day . ",
+    "Head": "Raul Castro",
+    "Tail": "June 3 , 1931",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
+{
+    "Sentence": "[E1] June 7 , 1910 [/E1] , 13-year-old [E2] Henry Bradford Washburn [/E2] was appointed by John F. Kennedy to serve as U.S. ambassador to France . ",
+    "Head": "June 7 , 1910",
+    "Tail": "Henry Bradford Washburn",
+    "Label": "per:date_of_birth",
+    "IsTrue": 2,
+    "Error": ""
+}
